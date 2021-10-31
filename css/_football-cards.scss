@@ -1,0 +1,42 @@
+$primary: rgb(55, 0, 58);
+$secondary: rgb(69, 19, 73);    
+
+.football-card-container {
+        max-width: 370px;
+        height: 420px;
+        margin: 0 auto;
+        position: relative;
+        box-shadow: inset 5px 5px 5px rgba($primary, .2),
+                    inset -5px -5px 15px rgba($secondary, .1),
+                    5px 5px 15px rgba($primary, .3), 
+                    -5px -5px 15px rgba($secondary, .1);
+        border-radius: 15px;
+        transition: .5s;
+      
+    .football-card-content{
+        
+    }
+    .football-card-cover {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        background: $secondary;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: .5s;
+        color: white;
+
+        .logo-img{
+            max-width: 100%;
+            height: 100px;
+            border: 1px solid white;
+            
+        }
+    }
+    p{
+        border: 1px solid white;
+        text-align: center;
+    }
+}

@@ -1,0 +1,32 @@
+$primary: rgb(55, 0, 58);
+$secondary: rgb(91, 10, 97);
+
+.content-hero{
+    background: $primary;
+    padding: 20px;
+    display: grid;
+    background-image: url("/images/premier-league/premier-league-bg.png"),  linear-gradient(to top, $secondary 0%, $primary 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .premier-league-clubs{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    .club-logo{
+        width: 100%;
+        height: auto;
+        
+        &:hover{
+            transform: scale(2);
+            transition: .5s;
+        }
+    }
+}
+.home-banner{
+    
+}

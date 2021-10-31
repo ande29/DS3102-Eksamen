@@ -5,8 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script defer src="/scripts/main-navbar.js"></script>
 </head>
 <body>
     
+    <header class="page-header">
+        <a class="logo" href="index.html">KnowledgeMe</a>
+        <i class="menu-bars fas fa-bars"></i>
+
+    <nav class="navbar-container">
+        <i class="exit-menu fas fa-times"></i>
+        <ul class="navbar">
+            <li>
+                <a class="navbar__link" href="index.html"><i class="navbar__link-icon fas fa-home"></i>Hjem</a>
+            </li>
+            <li>
+                <a class="navbar__link" href="quiz.html"><i class="navbar__link-icon fas fa-shopping-cart"></i>Quiz</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="main-content-container">
+
+        <div class="home-banner"></div>
+
+        <tab></tab>
+
+        <section class="content-header">
+            <section class="content-hero">
+                <div class="premier-league-clubs">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                    <img class="club-logo" src="/images/premier-league/logo/arsenal-logo.png" alt="">
+                </div>
+            </section>
+
+            <section class="content-filters">
+                <select name="filter-select" id="filter-select">
+                    <option value="trophies">Velg</option>
+                </select>
+                <input type="text" name="search-value" placeholder="Søk..">
+                <input type="button" name="search-btn" value="Søk">
+            </section>
+        </section>
+
+            <section class="content-output">
+
+
+
+            </section>
+
+
+    </main>
+      
+
+    <script src="scripts/components/Tabs.js"></script>
 </body>
 </html>

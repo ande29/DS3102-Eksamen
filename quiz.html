@@ -6,23 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script defer src="/scripts/main-navbar.js"></script>
 </head>
 <body>
-    <header>
-        <h1>KnowledgeMe</h1>
-        <hr>
-        <nav></nav>
+    <header class="page-header">
+        <a class="logo" href="index.html">KnowledgeMe</a>
+        <i class="menu-bars fas fa-bars"></i>
+
+        <nav class="navbar-container">
+            <i class="exit-menu fas fa-times"></i>
+            <ul class="navbar">
+                <li>
+                    <a class="navbar__link" href="index.html"><i class="navbar__link-icon fas fa-home"></i>Hjem</a>
+                </li>
+                <li>
+                    <a class="navbar__link" href="quiz.html"><i class="navbar__link-icon fas fa-shopping-cart"></i>Quiz</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="page-banner-container">
-            <h2 class="banner-title">test your Knowledge</h2>
-            <img class="page-banner" src="images/quiz.jpg" alt="Quiz">
-        </section>
+    <main>              
+        <card-item
+        imgUrl="../images/premier-league/logo/arsenal-logo.png"
+        title="Arsenal"
+        city="London"
+        button="Mer Info"
+        ></card>
     </main>
 
     <footer>
         
     </footer>
+    <script src="scripts/components/Card.js"></script>
 </body>
 </html>

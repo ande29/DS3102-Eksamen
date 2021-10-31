@@ -1,0 +1,91 @@
+$primary: rgb(55, 0, 58);
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+    .logo, .menu-bars, .navbar-container .navbar li a, .exit-menu {
+        text-decoration: none;
+        color: $primary;
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+    .navbar-container{
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        
+        z-index: 2;
+        top: 0;
+        left: 0;
+
+        background-color: rgb(255,255,255);
+        transition: .8s;
+        overflow: hidden;
+
+        .exit-menu{
+            width: 100%;
+            text-align: right;
+            background-color: $primary;
+            color: #fff;
+            border:1px solid $primary;
+
+            &:hover{
+                background-color: #fff;
+                color: $primary;
+            }
+        }
+
+        .navbar{
+            display: flex;
+            flex-direction: column;
+
+            &__link{
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                border-top: 1px solid rgb(255, 255, 255);
+            }
+            &__link-icon{
+                float: left;
+            }
+
+            &__link:hover{
+                background-color: rgb(255,255,255);
+                border-bottom: 1px solid $primary;
+                border-top: 1px solid $primary;
+            }
+        }
+    }
+    @media (min-width: 768px){
+        .page-header{
+            flex-wrap: nowrap;
+        }
+        .menu-bars, .exit-menu{
+            display: none;
+        }
+
+        .navbar-container{
+            position: static;
+            width: auto;
+
+            .navbar {
+                flex-direction: row;
+            }
+            .navbar__link:hover{
+                background-color: $primary;
+                border: 1px solid $primary;
+                color: white;
+                transition: .2s;
+            }
+
+        }
+    }
+}
