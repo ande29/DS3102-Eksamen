@@ -1,0 +1,116 @@
+#athletes-header{
+    display: flex;
+    justify-content: space-around;
+
+    &__filter{   
+
+    }
+    &__title{
+
+    }
+    &__search{
+    
+    }
+}
+section{
+    border: 1px solid red;
+    background-color: black;
+}
+article{
+
+
+}
+#athletes-card-container{
+    height: 20rem;
+    width: 17rem;
+    border-radius: 1rem;
+
+    .athletes-inner-card{
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 1rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        color: black;
+        box-shadow: inset 5px 5px 5px rgba(55, 0, 58, .2),
+                    inset -5px -5px 15px rgba(69, 19, 73, .1),
+                    5px 5px 15px rgba(55, 0, 58, .3), 
+                    -5px -5px 15px rgba(69, 19, 73, .1);
+    }
+    #athletes-img-container{
+        padding: 0.5rem;
+        display: flex;
+       // border: 1px solid red;
+        border-radius: 1rem;
+        height: 90%;
+        width: 100%;
+        animation: shimmer 1s linear infinite;
+        #athletes-image{
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+        }
+    }
+    #athletes-card-front{
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        &__genre{
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            position: relative;
+            left: 11rem;
+         //   border: 1px solid red;
+            width: 5rem;
+        }
+        &__name{
+            background-color: rgba(255, 255, 255, 1);
+            position: relative;
+      //      border: 1px solid red;
+            width: 10rem;
+            bottom: 1.5rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        &__age{
+            background-color: rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            border-radius: 1rem;
+       //     border: 1px solid red;
+            width: 5rem;
+            bottom: 1.2rem;
+            left: 0.5rem;
+        }
+    }
+
+    #athletes-card-back{
+        border-radius: 1rem;
+        border: 2px solid black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: rotateY(180deg);
+
+        &__title{
+            
+        }
+        &__bio{
+
+        }
+    }
+}
+#athletes-card-container:hover .athletes-inner-card{
+    transform: rotateY(180deg);
+}
+
+
