@@ -3,8 +3,8 @@ $primary: rgb(55, 0, 58);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    box-shadow: 0px 3px 15px 0px rgba($primary,0.5);
     
-
     .logo, .menu-bars, .navbar-container .navbar li a, .exit-menu {
         text-decoration: none;
         color: $primary;
@@ -21,7 +21,6 @@ $primary: rgb(55, 0, 58);
         height: 0%;
         width: 100%;
         position: fixed;
-        
         z-index: 2;
         top: 0;
         left: 0;
@@ -29,6 +28,7 @@ $primary: rgb(55, 0, 58);
         background-color: rgb(255,255,255);
         transition: .8s;
         overflow: hidden;
+        
 
         .exit-menu{
             width: 100%;

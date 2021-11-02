@@ -12,7 +12,6 @@ cardTemplate.innerHTML = `
                         5px 5px 15px rgba(55, 0, 58, .3), 
                         -5px -5px 15px rgba(69, 19, 73, .1);
             border-radius: 15px;
-            transition: .5s;
         }
         img{
             max-width: 100%;
@@ -30,11 +29,9 @@ cardTemplate.innerHTML = `
             background-position: center;
             border-radius: 20px;
             overflow: hidden;
-            transition: .5s;
-            color: white;
         }
         .header, .footer, .logo-box{
-            border: 1px solid white;
+            color: #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
