@@ -2,8 +2,10 @@ import PremierLeagueModule from "./modules/PremierLeagueModule.js"
 import athletesArray from "./athletesInformation.js";
 
 const contentOutput = document.querySelector(".content-output");
-const primary = "rgb(55, 0, 58)";
-const secondary = "rgb(34, 33, 169)";
+const primary = "linear-gradient(to bottom, #333399, #37003A);";
+const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
+
+
 
 const generateHtml = (theme) => {
     let htmlTxt = "";

@@ -29,6 +29,7 @@ cardTemplate.innerHTML = `
             bottom: 15px;
             border-radius: 20px;
             overflow: hidden;
+            
         }
         .header, .footer, .img-box{
             color: #ccc;
@@ -42,11 +43,7 @@ cardTemplate.innerHTML = `
             font-size: 1.5rem;
         }
         .img-box{
-            height: 220px;
-        }
-        .footer{
-            height: 70px;
-
+            height: 290px;
         }
         .btn{
             width: 200px;
@@ -74,9 +71,6 @@ cardTemplate.innerHTML = `
             </div>
             <div class="img-box">
                 <img>
-            </div>
-            <div class="footer">
-                <button class="btn">Mer Info</button>
             </div>
         </div>
     </article>
