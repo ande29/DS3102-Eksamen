@@ -8,10 +8,12 @@ const consoleLog = (e) => {
     console.log(target);
 }
 
-const toggleClass = (e) => {
-    e.classList.toggle("active-tab");
-    console.log(e);
+const toggleClass = (tab) => {
+    tab.classList.toggle("active-tab");
+    console.log(tab);
 }
+
+
 
 const tabsTemplate = document.createElement("template")
 
