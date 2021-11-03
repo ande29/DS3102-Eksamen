@@ -14,7 +14,10 @@
     justify-content: center;
     align-self:  auto, auto, flex-end;
 }
-
+.user-output{
+    border: 1px solid red;
+}
+    
 .quiz{
     display: flex;
     flex-direction: column;
@@ -30,12 +33,6 @@
         align-items: center;
         border: 1px solid red;
         margin: 0.5rem;
-    }
-    &__premier-league-article{
-
-    }
-    &__athletes-article{
-        
     }
 
     &__btn{
