@@ -22,9 +22,10 @@ tabsTemplate.innerHTML = `
         justify-content: center;
         background-color: rgb(55, 0, 58);
         height: 50px;
+        width: 100%;
         }
-        .content-tabs:last-child input{
-            border-left: 1px solid rgba(255, 255, 255, .2);
+        input[button]{
+            color: white;
         }
         .tabs{
             width: 50%;

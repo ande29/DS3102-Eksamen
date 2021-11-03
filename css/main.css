@@ -198,23 +198,10 @@ table {
   text-align: center;
 }
 
-.content-hero {
-  background: #37003a;
-}
-.content-hero img {
-  max-width: 100%;
-  height: auto;
-}
-
 #athletes-header {
   display: flex;
   justify-content: space-around;
 }
-section {
-  border: 1px solid red;
-  background-color: black;
-}
-
 #athletes-card-container {
   height: 20rem;
   width: 17rem;
@@ -295,4 +282,21 @@ section {
 }
 #athletes-card-container:hover .athletes-inner-card {
   transform: rotateY(180deg);
+}
+
+.banner-container {
+  position: relative;
+}
+.banner-container .banner-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.5);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+.banner-container .banner-overlay .title {
+  font-size: 2rem;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */

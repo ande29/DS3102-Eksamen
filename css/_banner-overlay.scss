@@ -1,0 +1,18 @@
+.banner-container{
+    position: relative;
+
+    .banner-overlay{
+        position: absolute;
+        bottom: 0;
+        background: rgba(30, 30, 30, .5);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+
+        .title{
+            font-size: 2rem;
+            padding: 10px;
+        }
+    }
+}
