@@ -1,16 +1,34 @@
+import generateHtml from "../card-generator.js"
+
 // variables
-const primary = "rgb(55, 0, 58)";
+let primary = "rgb(55, 0, 58)";
 const secondary = "rgb(34, 33, 169)";
+const bannerContainer = document.querySelector(".banner-container");
+
 
 // Functions
-const consoleLog = (e) => {
-    let target = e.dataset.theme;
-    console.log(target);
+
+const toggleClass = (tab, tabs, theme) => {
+    if(theme){
+        tabs.forEach(tab => {
+            tab.classList.remove("active-tab");
+        })
+    }
+    tab.classList.add("active-tab");
+    generateHtml(theme);
+    generateBanner(theme);
 }
 
-const toggleClass = (tab) => {
-    tab.classList.toggle("active-tab");
-    console.log(tab);
+const generateBanner = (theme) => {
+    let htmlTxt = "";
+    
+
+    htmlTxt = `
+            <banner-img
+                imgUrl = "${theme}-banner.jpeg"
+            ></banner-img>
+    `;
+    bannerContainer.innerHTML = htmlTxt;
 }
 
 
@@ -70,9 +88,9 @@ class Tabs extends HTMLElement {
 
         const tabs = this.querySelectorAll(".tabs")
         tabs.forEach(tab => {
+            const theme = tab.dataset.theme;
             tab.addEventListener("click", () => {
-                consoleLog(tab);
-                toggleClass(tab);
+                toggleClass(tab, tabs, theme);
             })
         })
     }

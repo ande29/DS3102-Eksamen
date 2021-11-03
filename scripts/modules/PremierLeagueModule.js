@@ -13,7 +13,7 @@ const PremierLeagueModule = ( function(){
         {name: "Leicester", city: "Leicester", stadium: "King Power Stadium", founded: 1884, titles: 1, manager: "Brendan Rodgers", logo: "leicester-logo.png"},
         {name: "Liverpool", city: "Liverpool", stadium: "Anfield", founded: 1892, titles: 1, manager: "Jurgen Klopp", logo: "liverpool-logo.png"},
         {name: "Manchester City", city: "Manchester", stadium: "Etihad Stadium", founded: 1880, titles: 5, manager: "Pep Guardiola", logo: "manchester-city-logo.png"},
-        {name: "Manchester United", city: "Manchester", stadium: "Old Trafford", founded: 1878, titles: 13, manager: "Ole Gunnar Solskjær", logo: "manchester-united-logo.png"},
+        {name: "Manchester United", city: "Manchester", stadium: "Old Trafford", founded: 1878, titles: 13, manager: "Ole Gunnar Solskjær", logo: "manchester-united.png"},
         {name: "Newcastle", city: "Newcastle", stadium: "St James Park", founded: 1892, titles: 0, manager: "Steve Bruce", logo: "newcastle-logo.png"},
         {name: "Norwich", city: "Norwich", stadium: "Carrow Road", founded: 1902, titles: 0, manager: "Daniel Farke", logo: "norwich-logo.png"},
         {name: "Southampton", city: "Southampton", stadium: "St Mary's Stadium", founded: 1885, titles: 0, manager: "Ralph Hasenhuttl", logo: "southampton-logo.png"},

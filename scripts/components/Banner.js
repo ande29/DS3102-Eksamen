@@ -5,6 +5,7 @@ bannerTemplate.innerHTML = `
         .banner-img{
             width: 100%;
             height: auto;
+            max-height: 80vh;
             display: block;
         }
         

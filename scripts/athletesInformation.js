@@ -1,11 +1,11 @@
-import {cardTemplate, Card} from `../scripts/components/Card.js`;
+//import {cardTemplate, Card} from `../scripts/components/Card.js`;
 
     const athletesArray = [
         {name: "Karsten Warholm", age:"25", sport:"Friidrett", img:"warholm.jpeg"},
         {name: "Magnus Carlsen",  age:"30", sport:"Sjakk", img:"magnus-carlsen.jpeg"},
-        {name: "Cecilia Brækhus",  age:"40", sport:"Boksing", img:"cecilia-b.jepg"},
+        {name: "Cecilia Brækhus",  age:"40", sport:"Boksing", img:"cecilia-b.jpeg"},
         {name: "Suzann Pettersen",  age:"40", sport:"Golf", img:"suzann-pettersen.jpeg"},
-        {name: "Erling Braut Haaland",  age:"21", sport:"Fotball", img:"haaland.jepg"},
+        {name: "Erling Braut Haaland",  age:"21", sport:"Fotball", img:"haaland.jpeg"},
     ];
     console.log(athletesArray);
 
@@ -31,7 +31,7 @@ import {cardTemplate, Card} from `../scripts/components/Card.js`;
             bio: "Erling er en norsk fotballspiller som spiller for den tyske klubben Borussia Dortmund. Erling gikk gradene som spiller i Bryne, og ble solgt til Molde Fotballklubb før ferden gikk til Tyskland og Borussia Dortmund i 2020. Han har så langt scoret 49 mål for Tyskerne. "
         }
     ];
-
+/*
     console.log(athletesBio);
 
 
@@ -44,4 +44,5 @@ import {cardTemplate, Card} from `../scripts/components/Card.js`;
             console.log(athleteCard);
     })
 }
-
+*/
+export default athletesArray;

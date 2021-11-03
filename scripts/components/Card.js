@@ -14,6 +14,7 @@ cardTemplate.innerHTML = `
                         5px 5px 15px rgba(55, 0, 58, .3), 
                         -5px -5px 15px rgba(69, 19, 73, .1);
             border-radius: 15px;
+            margin: 20px auto;
         }
         img{
             max-width: 100%;
@@ -97,8 +98,7 @@ cardTemplate.innerHTML = `
         this.querySelector("img").alt = imgAlt;
 
         const background = this.getAttribute("background");
-        this.querySelector(".inside").style = `background: ${background};
-        `;
+        this.querySelector(".inside").style = `background: ${background};`;
     }
 }
 
