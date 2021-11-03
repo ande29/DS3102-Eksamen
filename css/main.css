@@ -320,6 +320,10 @@ table {
   align-self: auto, auto, flex-end;
 }
 
+.user-output {
+  border: 1px solid red;
+}
+
 .quiz {
   display: flex;
   flex-direction: column;
