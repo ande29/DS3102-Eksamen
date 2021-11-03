@@ -1,4 +1,4 @@
-
+import {cardTemplate, Card} from `../scripts/components/Card.js`;
 
     const athletesArray = [
         {name: "Karsten Warholm", age:"25", sport:"Friidrett", img:"warholm.jpeg"},
@@ -38,5 +38,10 @@
     const sampledInformation = {...athletesArray, ...athletesBio};
     console.log(sampledInformation);
 
-
+    generateAthletesCard = () =>{
+        athletesArray.forEach(athlete => {
+            athleteCard += new Card(athlete.name, athlete.img);
+            console.log(athleteCard);
+    })
+}
 
