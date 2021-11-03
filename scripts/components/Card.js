@@ -1,3 +1,5 @@
+// gradient background-image: linear-gradient(to top, rgb(69, 19, 73) 0%, rgb(55, 0, 58) 100%);
+
 const cardTemplate = document.createElement("template");
 
 cardTemplate.innerHTML = `
@@ -24,13 +26,10 @@ cardTemplate.innerHTML = `
             left: 15px;
             right: 15px;
             bottom: 15px;
-            background: rgb(55, 0, 58);
-            background-image: linear-gradient(to top, rgb(69, 19, 73) 0%, rgb(55, 0, 58) 100%);
-            background-position: center;
             border-radius: 20px;
             overflow: hidden;
         }
-        .header, .footer, .logo-box{
+        .header, .footer, .img-box{
             color: #ccc;
             display: flex;
             justify-content: center;
@@ -41,7 +40,7 @@ cardTemplate.innerHTML = `
             height: 100px;
             font-size: 1.5rem;
         }
-        .logo-box{
+        .img-box{
             height: 220px;
         }
         .footer{
@@ -70,15 +69,13 @@ cardTemplate.innerHTML = `
     <article>
         <div class="inside">
             <div class="header">
-                <h2 class="club"></h2>
-                <p class="city"></p>
+                <h2 class="name"></h2>
             </div>
-            <div class="logo-box">
-                <img class"logo" alt="">
+            <div class="img-box">
+                <img>
             </div>
-            <div class="trophies"></div>
             <div class="footer">
-                <button class="btn"></button>
+                <button class="btn">Mer Info</button>
             </div>
         </div>
     </article>
@@ -92,20 +89,18 @@ class Card extends HTMLElement {
 
         
 
-        const club = this.getAttribute("club");
-        this.querySelector(".club").innerHTML = club;
-
-        const city = this.getAttribute("city");
-        this.querySelector(".city").innerHTML = city;
-
-        const button = this.getAttribute("button");
-        this.querySelector(".btn").innerHTML = button;
+        const name = this.getAttribute("name");
+        this.querySelector(".name").innerHTML = name;
         
         const imgUrl = this.getAttribute("imgUrl");
         this.querySelector("img").src = `../../images/premier-league/logo/${imgUrl}`;
         
         const imgAlt = this.getAttribute("imgAlt");
         this.querySelector("img").alt = imgAlt;
+
+        const background = this.getAttribute("background");
+        this.querySelector(".inside").style = `background: ${background};
+        `;
     }
 }
 

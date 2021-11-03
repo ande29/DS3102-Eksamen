@@ -24,9 +24,6 @@ tabsTemplate.innerHTML = `
         height: 50px;
         width: 100%;
         }
-        input[button]{
-            color: white;
-        }
         .tabs{
             width: 50%;
             background-color: rgb(55, 0, 58);
