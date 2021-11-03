@@ -135,36 +135,17 @@ table {
   }
 }
 
-/*.content-tabs{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(55, 0, 58);
-    padding-bottom: 20px;
-
-    .tabs{
-        width: 50%;
-        background-color: rgb(55, 0, 58);
-        border: 1px solid rgba(255, 255, 255,.5);
-        padding: 10px 5px;
-        color: #999;
-
-        &:hover{
-            background-color: rgba(255, 255, 255, .1);
-            border: 1px solid rgba(255, 255, 255, .1);
-            color: #fff;
-        }
-    }
-    .active-tab{
-        color: #eee;
-        border: 1px solid rgb(55, 0, 58);
-        border-top: none;
-    }
-}*/
 .content-filters {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.content-filters select, .content-filters input, .content-filters select option {
+  text-align: center;
+  padding: 5px;
+  width: 80%;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .football-card-container {
@@ -196,6 +177,13 @@ table {
 .football-card-container p {
   border: 1px solid white;
   text-align: center;
+}
+
+.page-headline {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #37003a;
 }
 
 #athletes-header {

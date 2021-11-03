@@ -7,6 +7,8 @@ bannerTemplate.innerHTML = `
             height: auto;
             max-height: 80vh;
             display: block;
+            background: rgb(77,27,78);
+            background: linear-gradient(90deg, rgba(77,27,78,1) 0%, rgba(31,64,200,1) 100%);
         }
         
     </style>

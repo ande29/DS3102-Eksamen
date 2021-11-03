@@ -4,6 +4,7 @@ import generateHtml from "../card-generator.js"
 let primary = "rgb(55, 0, 58)";
 const secondary = "rgb(34, 33, 169)";
 const bannerContainer = document.querySelector(".banner-container");
+const filterSelect = document.querySelector(".filter-select");
 
 
 // Functions
@@ -15,18 +16,19 @@ const toggleClass = (tab, tabs, theme) => {
         })
     }
     tab.classList.add("active-tab");
+    
     generateHtml(theme);
-    generateBanner(theme);
+    generateBanner(theme, tab);
 }
 
-const generateBanner = (theme) => {
+const generateBanner = (theme, tab) => {
     let htmlTxt = "";
     
 
     htmlTxt = `
-            <banner-img
-                imgUrl = "${theme}-banner.jpeg"
-            ></banner-img>
+    <banner-img
+    imgUrl = "${theme}-banner.jpeg"
+    ></banner-img>
     `;
     bannerContainer.innerHTML = htmlTxt;
 }
@@ -43,6 +45,8 @@ tabsTemplate.innerHTML = `
         background-color: rgb(55, 0, 58);
         height: 50px;
         width: 100%;
+        margin-bottom: 30px;
+        box-shadow: 1px 3px 10px 0px rgba(55,0,58,0.75);
         }
         .tabs{
             width: 50%;
