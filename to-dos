@@ -1,0 +1,42 @@
+** HTML // DESIGN
+o Mobile (0-576px): 1 column of information
+o Tablet (577-970px): 2 or 3 columns of information 
+o Desktop (971+ px): 3 or 4 columns of information
+Landing Page 
+kortet til informasjonsiden                                     
+Flip Cards på idrettsstjerner
+Banner
+Navbar
+filter & inputfelt
+animasjoner // KEyframes eller Gsap
+
+Quizsiden:
+Egen banner til quiz
+-> input til navn og alder (Lagres i localstorage)
+ptag til velkommen bruker
+Button til å velge quiz
+(Pop up) side når quiz er valgt. Med Banner, navn, riktig spm og antall spm
+animasjoner 
+
+Funksjoner: 
+arrow funksjons --- check 
+filter  ---check
+spread 
+map
+sort
+reduce  // Legge sammen poeng i quiz
+automatisk funksjon
+if 
+for each
+for-løkke
+
+LocalStorage:
+JSON
+object literal
+
+Modul  --- check
+Class   --- check
+Komponenter --- check
+Shadow Komponenter
+Gsap
+dry

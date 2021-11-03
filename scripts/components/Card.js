@@ -81,19 +81,17 @@ cardTemplate.innerHTML = `
     </article>
 `;
 
-class Card extends HTMLElement {
-    constructor() {
+ class Card extends HTMLElement {
+    constructor( ) {
         super()
 
         this.appendChild(cardTemplate.content.cloneNode(true))
-
-        
 
         const name = this.getAttribute("name");
         this.querySelector(".name").innerHTML = name;
         
         const imgUrl = this.getAttribute("imgUrl");
-        this.querySelector("img").src = `../../images/premier-league/logo/${imgUrl}`;
+        this.querySelector("img").src = `../../images/${imgUrl}`;
         
         const imgAlt = this.getAttribute("imgAlt");
         this.querySelector("img").alt = imgAlt;
@@ -105,3 +103,4 @@ class Card extends HTMLElement {
 }
 
 window.customElements.define("card-item", Card)
+
