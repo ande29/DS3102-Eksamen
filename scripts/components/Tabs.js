@@ -1,4 +1,4 @@
-import generateHtml from "../card-generator.js"
+import generateCards from "../card-generator.js"
 
 // variables
 let primary = "rgb(55, 0, 58)";
@@ -17,11 +17,11 @@ const toggleClass = (tab, tabs, theme) => {
     }
     tab.classList.add("active-tab");
     
-    generateHtml(theme);
+    generateCards(theme);
     generateBanner(theme, tab);
 }
 
-const generateBanner = (theme, tab) => {
+const generateBanner = (theme) => {
     let htmlTxt = "";
     
 
