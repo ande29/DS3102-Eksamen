@@ -1,10 +1,10 @@
 import generateCards from "../card-generator.js"
+import selectOptions from "../filter.js"
 
 // variables
 let primary = "rgb(55, 0, 58)";
 const secondary = "rgb(34, 33, 169)";
 const bannerContainer = document.querySelector(".banner-container");
-const filterSelect = document.querySelector(".filter-select");
 
 
 // Functions
@@ -19,11 +19,11 @@ const toggleClass = (tab, tabs, theme) => {
     
     generateCards(theme);
     generateBanner(theme, tab);
+    selectOptions(theme);
 }
 
 const generateBanner = (theme) => {
-    let htmlTxt = "";
-    
+    let htmlTxt = "";  
 
     htmlTxt = `
     <banner-img
