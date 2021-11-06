@@ -3,49 +3,53 @@ const nameInput = document.querySelector("#name-input");
 const selectBtn = document.querySelector("#select-btn");
 const userOutput = document.querySelector(".user-output");
 
+
 let adminStorage = () => {
     let addAdming = [
     {
-        name:"admin",
-        gender: "netural"
-    }
+        name: "",
+        gender:"" 
+    },
     ];
     localStorage.setItem("users", JSON.stringify(addAdming));      
 }
-( // immediately triggered arrow function	
-	() => adminStorage()
-)();
 
-let addUser = () => {
+if(localStorage.getItem("users")){
+    addAdming = JSON.parse(localStorage.getItem("users"))
+}else{
+    (
+        () => adminStorage()
+    )();
+}
+
+let usersOutput = () => {
     const name = nameInput.value;
     const gender = selectedGender.value;
     let message;
     
-    if(name.length > 0){
+    if(nameInput.value.length > 0){
         message = `<p>${name} og du er en ${gender}</p>`;
-        storeUser(name, gender);
     }else{
         message = `<p style='color: red'> please select Gender and type in name`;
     }
 
     userOutput.innerHTML = message;
-
-
 }
-selectBtn.addEventListener("click", addUser)
 
-let storeUser = (a,b) => {
+let storeUser = () => {
     let userObj = [
         {
-            name: a,
-            gender: b,
+            name: nameInput.value,
+            gender: selectedGender.value,
         },
     ];
     
-    let users = JSON.parse(localStorage.getItem("users"));
-
-    users.push(userObj);
-
-    localStorage.setItem("users", JSON.stringify(userObj));
+    if(nameInput.value.length > 0){
+        let users = JSON.parse(localStorage.getItem("users"));
+        users.push(userObj)
+        localStorage.setItem("users", JSON.stringify(users));
+    }
 }
 
+
+selectBtn.addEventListener("click", storeUser, usersOutput);
