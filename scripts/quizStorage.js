@@ -37,6 +37,7 @@ let usersOutput = () => {
 }
 
 let storeUser = () => {
+    let message;
     let userObj = [
         {
             name: nameInput.value,
@@ -48,7 +49,12 @@ let storeUser = () => {
         let users = JSON.parse(localStorage.getItem("users"));
         users.push(userObj)
         localStorage.setItem("users", JSON.stringify(users));
+
+        message = `<p>${nameInput.value} og du er en ${selectedGender.value}</p>`;
+    }else{
+        message = `<p style='color: red'> please select Gender and type in name`;
     }
+    userOutput.innerHTML = message;
 }
 
 
