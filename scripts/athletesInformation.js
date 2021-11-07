@@ -1,11 +1,11 @@
 //import {cardTemplate, Card} from `../scripts/components/Card.js`;
 
     const athletesArray = [
-        {name: "Karsten Warholm", age:"25", sport:"Friidrett", img:"warholm.jpeg"},
-        {name: "Magnus Carlsen",  age:"30", sport:"Sjakk", img:"magnus-carlsen.jpeg"},
-        {name: "Cecilia Brækhus",  age:"40", sport:"Boksing", img:"cecilia-b.jpeg"},
-        {name: "Suzann Pettersen",  age:"40", sport:"Golf", img:"suzann-pettersen.jpeg"},
-        {name: "Erling Braut Haaland",  age:"21", sport:"Fotball", img:"haaland.jpeg"},
+        {name: "Karsten Warholm", age:"25", city:"Friidrett", img:"warholm.jpeg"},
+        {name: "Magnus Carlsen",  age:"30", city:"Sjakk", img:"magnus-carlsen.jpeg"},
+        {name: "Cecilia Brækhus",  age:"40", city:"Boksing", img:"cecilia-b.jpeg"},
+        {name: "Suzann Pettersen",  age:"40", city:"Golf", img:"suzann-pettersen.jpeg"},
+        {name: "Erling Braut Haaland",  age:"21", city:"Fotball", img:"haaland.jpeg"},
     ];
     console.log(athletesArray);
 
