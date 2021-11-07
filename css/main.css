@@ -295,6 +295,10 @@ table {
   text-align: center;
 }
 
+.select-cursor {
+  cursor: pointer;
+}
+
 .user-header {
   font-size: large;
   font-weight: bold;
@@ -330,4 +334,30 @@ table {
 .quiz__btn {
   width: 40%;
   height: 3rem;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.modal-content {
+  background-color: white;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }/*# sourceMappingURL=main.css.map */

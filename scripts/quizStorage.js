@@ -22,20 +22,6 @@ if(localStorage.getItem("users")){
     )();
 }
 
-let usersOutput = () => {
-    const name = nameInput.value;
-    const gender = selectedGender.value;
-    let message;
-    
-    if(nameInput.value.length > 0){
-        message = `<p>${name} og du er en ${gender}</p>`;
-    }else{
-        message = `<p style='color: red'> please select Gender and type in name`;
-    }
-
-    userOutput.innerHTML = message;
-}
-
 let storeUser = () => {
     let message;
     let userObj = [
@@ -52,10 +38,10 @@ let storeUser = () => {
 
         message = `<p>${nameInput.value} og du er en ${selectedGender.value}</p>`;
     }else{
-        message = `<p style='color: red'> please select Gender and type in name`;
+        message = `<p style='color: red'> please select gender and type in name`;
     }
     userOutput.innerHTML = message;
 }
 
 
-selectBtn.addEventListener("click", storeUser, usersOutput);
+selectBtn.addEventListener("click", storeUser);
