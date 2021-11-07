@@ -33,14 +33,15 @@ const filterSelection = (cards, color) => {
     selectInput.addEventListener("input", () => {
         let inputValue = selectInput.value;
         let output;
-        console.log(inputValue);
 
+        // vunnet ligaen
         if(inputValue === "Vunnet Premier League"){
             output = cards.filter(card => {
                 card = (card.titles > 0);
                 return card;
             })
         } 
+        // ikke vunnet ligaen
         if(inputValue === "Ikke vunnet Premier League"){
             output = cards.filter(card => {
                 card = (card.titles < 1);
@@ -50,23 +51,20 @@ const filterSelection = (cards, color) => {
         // A-Z
         else if(inputValue === "Navn (A-Z)"){
             output = cards.sort((a,b) => a.name > b.name ? 1 : -1)
-            console.log(output);
         }
         // Z-A
         else if(inputValue === "Navn (Z-A)"){
             output = cards.sort((a,b) => a.name < b.name ? 1 : -1)
-            console.log(output);
         }
         // Lav til høy
         else if(inputValue === "Alder (lav-høy)"){
             output = cards.sort((a,b) => a.age > b.age ? 1 : -1)
-            console.log(output);
         }
         // høy til lav
         else if(inputValue === "Alder (høy-lav)"){
             output = cards.sort((a,b) => a.age < b.age ? 1 : -1)
-            console.log(output);
         }
+        searchBar.value = "";
         displayCards(output, color);
     })
 }
