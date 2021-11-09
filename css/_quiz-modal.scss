@@ -3,19 +3,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     top: 0px;
     left: 0px;
     visibility: hidden;
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(55, 0, 58, 0.2)
 }
 .modal-content{
-    background-color: white;
-    
+    background-color:rgb(34, 33, 169);
+    box-shadow:  10px 8px 5px rgba(55, 0, 58, .2);
+    color: white;
+    width: 50%;
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
 }
-.show-modal {
+.close-btn{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(34, 33, 169);
+    color: white;
+}
+.question-content{
+    padding: 1rem;
+}
+.question-header{
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+    border-bottom: 1px solid white;
+}
+.quiz-btn{
+    width: 90%;
+    padding: 0.5rem;
+    //background-color: rgb(34, 33, 169);
+    border-radius: 1rem;
+}
+.open-modal {
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
