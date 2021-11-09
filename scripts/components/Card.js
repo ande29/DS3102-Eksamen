@@ -27,7 +27,7 @@ cardTemplate.innerHTML = `
             left: 15px;
             right: 15px;
             bottom: 15px;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             
         }
@@ -43,13 +43,13 @@ cardTemplate.innerHTML = `
             font-size: 1.5rem;
         }
         .img-box{
-            height: 290px;
+            height: 220px;
         }
         .btn{
             width: 200px;
             height: 50px;
             border-radius: 8px;
-            background: rgb(55, 0, 58);
+            border: 1px solid white;
             background-image: linear-gradient(315deg, rgba(248, 206, 236,.5) 0%, rgba(168, 139, 235,.5) 74%);
             color: black;
             font-size: 1.2rem;
