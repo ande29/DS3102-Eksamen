@@ -45,6 +45,10 @@
     //background-color: rgb(34, 33, 169);
     border-radius: 1rem;
 }
+.quiz-btn:hover{
+    background-color: green;
+    transition: 1s;
+}
 .open-modal {
     opacity: 1;
     visibility: visible;

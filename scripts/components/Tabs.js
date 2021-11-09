@@ -1,6 +1,5 @@
-import generateCards from "../card-generator.js"
+import generateCards from "../card-generator.js";
 import selectOptions from "../filter.js";
-
 // variables
 const bannerContainer = document.querySelector(".banner-container");
 const activeWindow = window.document.title;

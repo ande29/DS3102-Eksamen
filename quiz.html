@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <script defer src="/scripts/main-navbar.js"></script>
     <script defer src="/scripts/quizStorage.js"></script>
-    <script defer src="/scripts/quizButtons.js"></script>
+    <script defer type="module" src="/scripts/quizGenerator.js"></script>
+    <script defer type="module" src="/scripts/questionsData.js"></script>
 </head>
 <body>
     <header class="page-header">
@@ -60,26 +61,22 @@
             </section>
             
             <section class="quiz">
-                <article class="premier-league-article quiz__box">
-                    <h3 class="quiz__header">Test deg om Premier League</h3>
-                    <button class="PL-button quiz__btn">Start Quiz</button>
-                </article>
-                <article class="athletes-article quiz__box">
-                    <h3 class="quiz__header">Test dine Ferdigheter om Norske Idretsutøvere</h3>
-                    <button class="athlete-button quiz__btn">Start Quiz</button>
+                <article class="quiz__box">
+                    <h3 class="quiz__header">Test dine ferdigheter</h3>
+                    <button class="quiz__btn">Start Quiz</button>
                 </article>
             </section>
             <section class="modal">
-                <article class="modal-content">
-                    <button class="close-btn"><i class="fas fa-times"></i></button>
-                    <h2 class="modal-header"></h2>
-                    <div class="question-content">
-                        <h2 class="question-header">Spørsmål 1</h2>
-                        <p class="question-output">Blabblalblallblabla</p>
-                    </div>
-                    <button class="answer-no quiz-btn">Valg 1</button>
-                    <button class="answer-yes quiz-btn">Valg 2</button>
-                </article>
+                <!--<article class="modal-content">-->
+                <!--<button class="close-btn"><i class="fas fa-times"></i></button>-->
+                <!--<h2 class="modal-header"></h2>-->
+                <!--    <div class="question-content">-->
+                <!--        <h2 class="question-number">Spørsmål 1</h2>-->
+                <!--        <p class="question-output">Blabblalblallblabla</p>-->
+                <!--    </div>-->
+                <!--    <button class="answer-btn quiz-btn">Valg 1</button>-->
+                <!--    <button class="answer-btn quiz-btn">Valg 2</button>-->
+                <!--</article>-->
             </section>
     </main>
 
