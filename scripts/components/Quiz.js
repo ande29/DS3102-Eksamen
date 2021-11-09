@@ -43,18 +43,17 @@ quizTemplate.innerHTML = `
     }
     </style>
 
-    <section class="modal">
         <article class="modal-content">
             <button class="close-btn"><i class="fas fa-times"></i></button>
             <h2 class="modal-header"></h2>
             <div class="question-content">
-                <h2 class="question-number">Spørsmål 1</h2>
-                <p class="question-output">Blabblalblallblabla</p>
+                <h2 class="question-number"></h2>
+                <p class="question-output"></p>
             </div>
-            <button class="answer-btn quiz-btn">Valg 1</button>
-            <button class="answer-btn quiz-btn">Valg 2</button>
+            <button class="answer-btn quiz-btn"></button>
+            <button class="answer-btn quiz-btn"></button>
         </article>
-    </section>
+
 `;
 
 class Quiz extends HTMLElement {
@@ -72,7 +71,7 @@ class Quiz extends HTMLElement {
         const quizQuestion = this.getAttribute("quizQuestion");
         this.querySelector(".question-output").innerHTML = `${quizQuestion}`;
 
-        const answerBtn = this.getAttribute("correctBtn");
+        const answerBtn = this.getAttribute("answerBtn");
         this.querySelector(".answer-btn").innerHTML = `${answerBtn}`;
     }
 };

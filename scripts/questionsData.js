@@ -10,7 +10,7 @@ const athleteQustions = [
         number: "3", question: "Hvor mange profesjonelle seiere har Suzann Pettersen i golf?"
     },
     {
-        number: "4", question: "Hvor mange år var Magnus Carlsen når han ble stormester i sjakk?"
+        number: "4", question: "Hvor mange år var Magnus Carlsen da han ble stormester i sjakk?"
     },
     {
         number: "5", question: "Hvilken norsk idrettsjerne vant VM-gull i friidrett?"
