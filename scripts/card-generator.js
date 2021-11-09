@@ -9,6 +9,7 @@ const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 const selectInput = document.querySelector("#filter-select");
 const searchBar = document.querySelector("#search-bar");
 
+
 // arrays
 
 let premierLeagueArray = PremierLeagueModule.getAllClubs();
@@ -69,7 +70,7 @@ const filterSelection = (cards, color) => {
     })
 }
 
-// card generation
+// load cards
 
 const generateCards = (theme) => {
     switch(theme){
