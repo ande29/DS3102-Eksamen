@@ -1,7 +1,6 @@
 const PremierLeagueModule = ( function(){
 
     const premierLeagueArray = [
-        {name: "Manchester United", city: "Manchester", stadium: "Old Trafford", founded: 1878, titles: 13, manager: "Ole Gunnar Solskjær", img: "manchester-united.png"},
         {name: "Arsenal", city: "London", stadium: "Emirates", founded: 1886, titles: 3, manager: "Mikel Arteta", img: "arsenal-logo.png"},
         {name: "Aston Villa", city: "Birmingham", stadium: "Villa Park", founded: 1, titles: 0, manager: "Dean Smith", img: "aston-villa-logo.png"},
         {name: "Brentford", city: "London", stadium: "Brentford Community Stadium", founded: 1889, titles: 0, manager: "Thomas Frank", img: "brentford-logo.png"},
@@ -14,6 +13,7 @@ const PremierLeagueModule = ( function(){
         {name: "Leicester", city: "Leicester", stadium: "King Power Stadium", founded: 1884, titles: 1, manager: "Brendan Rodgers", img: "leicester-logo.png"},
         {name: "Liverpool", city: "Liverpool", stadium: "Anfield", founded: 1892, titles: 1, manager: "Jurgen Klopp", img: "liverpool-logo.png"},
         {name: "Manchester City", city: "Manchester", stadium: "Etihad Stadium", founded: 1880, titles: 5, manager: "Pep Guardiola", img: "manchester-city-logo.png"},
+        {name: "Manchester United", city: "Manchester", stadium: "Old Trafford", founded: 1878, titles: 13, manager: "Ole Gunnar Solskjær", img: "manchester-united.png"},
         {name: "Newcastle", city: "Newcastle", stadium: "St James Park", founded: 1892, titles: 0, manager: "Steve Bruce", img: "newcastle-logo.png"},
         {name: "Norwich", city: "Norwich", stadium: "Carrow Road", founded: 1902, titles: 0, manager: "Daniel Farke", img: "norwich-logo.png"},
         {name: "Southampton", city: "Southampton", stadium: "St Mary's Stadium", founded: 1885, titles: 0, manager: "Ralph Hasenhuttl", img: "southampton-logo.png"},

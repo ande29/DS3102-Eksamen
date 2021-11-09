@@ -1,5 +1,3 @@
-// gradient background-image: linear-gradient(to top, rgb(69, 19, 73) 0%, rgb(55, 0, 58) 100%);
-
 const cardTemplate = document.createElement("template");
 
 cardTemplate.innerHTML = `
@@ -16,11 +14,6 @@ cardTemplate.innerHTML = `
             border-radius: 15px;
             margin: 20px auto;
         }
-        img{
-            max-width: 100%;
-            height: 200px;
-            
-        }
         .inside{
             position: absolute;
             top: 15px;
@@ -28,50 +21,65 @@ cardTemplate.innerHTML = `
             right: 15px;
             bottom: 15px;
             border-radius: 15px;
-            overflow: hidden;
-            
+            overflow: hidden;           
         }
-        .header, .footer, .img-box{
+        
+        .inside__front .header, .inside__front .content{
             color: #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .header{
+        .inside__front .header{
             padding: 10px;
             height: 100px;
             font-size: 1.5rem;
         }
-        .img-box{
+        .inside__front .content{
             height: 220px;
         }
-        .btn{
-            width: 200px;
-            height: 50px;
-            border-radius: 8px;
-            border: 1px solid white;
-            background-image: linear-gradient(315deg, rgba(248, 206, 236,.5) 0%, rgba(168, 139, 235,.5) 74%);
-            color: black;
-            font-size: 1.2rem;
-            border: 1px solid rgb(55, 0, 58);
-            color: #ccc;
+        .inside__front img{
+            max-width: 100%;
+            height: 200px;
         }
-        .btn:hover{
-            border: 1px solid white;
-            color: #fff;
-            background-image: linear-gradient(315deg, rgba(168, 139, 235, .5) 0%, rgba(248, 206, 236, .5) 74%);
-            transition: .8s;
+
+        .inside__back {
+            height: 390px;
+        }
+        .inside__back .content{
+            background-color: #f3f3f3;
+            height: 290px;
+        }
+        .inside__back .header {
+            height: 100px;
+        }
+        .flipped {
+            transform: rotateY(180deg);
         }
     </style>
 
-    <article>
+    <article class="card">
         <div class="inside">
-            <div class="header">
-                <h2 class="name"></h2>
+            <div class="inside__front">
+                <div class="header">
+                    <h2 class="name"></h2>
+                </div>
+                <div class="content">
+                    <img>
+                </div>
             </div>
-            <div class="img-box">
-                <img>
+
+            <div class="inside__back">
+                <div class="header">
+                    <img class="profile-img">
+                    <h2 class="name"></h2>
+                </div>
+                <div class="content">
+                    
+                    <p class="bio"></p>
+                </div>
             </div>
+            
         </div>
     </article>
 `;
@@ -81,7 +89,7 @@ cardTemplate.innerHTML = `
         super()
 
         this.appendChild(cardTemplate.content.cloneNode(true))
-
+        
         const name = this.getAttribute("name");
         this.querySelector(".name").innerHTML = name;
         

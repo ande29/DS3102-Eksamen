@@ -70,6 +70,24 @@ const filterSelection = (cards, color) => {
     })
 }
 
+
+// Display cards
+
+const displayCards = (cards, color) => {
+    const htmlTxt = cards.map((card) => {
+        return `
+        <card-item
+        name="${card.name}"
+        imgUrl="card-logos/${card.img}"
+        imgAlt="${card.name} logo"
+        background="${color}"
+        ></card-item>
+        `;
+        
+    })
+    contentOutput.innerHTML = htmlTxt;
+}
+
 // load cards
 
 const generateCards = (theme) => {
@@ -80,33 +98,15 @@ const generateCards = (theme) => {
             filterSelection(premierLeagueArray, primary);
             searchBar.placeholder = "Søk etter klubb eller by...";
             break;
-
-        case "norwegian-athletes": 
+            
+            case "norwegian-athletes": 
             displayCards(athletesArray, secondary);
             searchFunction(athletesArray, secondary);
             filterSelection(athletesArray, secondary);
             searchBar.placeholder = "Søk etter utøver eller idrett...";
             break;
+        }
     }
-}
-
-// Display cards
-
-const displayCards = (cards, color) => {
-    const htmlTxt = cards.map((card) => {
-            return `
-            <card-item
-            name="${card.name}"
-            imgUrl="card-logos/${card.img}"
-            imgAlt="${card.name} logo"
-            background="${color}"
-            ></card-item>
-            `;
-        })
-        contentOutput.innerHTML = htmlTxt;
-}
-
-
 
 
 export default generateCards;

@@ -3,7 +3,7 @@ import selectOptions from "../filter.js";
 
 // variables
 const bannerContainer = document.querySelector(".banner-container");
-
+const activeWindow = window.document.title;
 
 // Functions
 
@@ -15,9 +15,15 @@ const toggleClass = (tab, tabs, theme) => {
     }
     tab.classList.add("active-tab");
     
-    generateBanner(theme, tab);
-    generateCards(theme);
-    selectOptions(theme);
+    if(activeWindow === "Home"){
+        generateCards(theme);
+        selectOptions(theme);     
+    } 
+    if(activeWindow === "Quiz"){
+        
+    }
+
+    generateBanner(theme);
 }
 
 const generateBanner = (theme) => {
