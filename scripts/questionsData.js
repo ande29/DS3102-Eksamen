@@ -1,5 +1,5 @@
 
-athleteQustions = [
+const athleteQustions = [
     {
         number: "1", question: "Hvilken norsk idrettsstjerne spiller fotball i Tyskland?"
     },
@@ -17,25 +17,27 @@ athleteQustions = [
     },
 ];
 
-athleteAnswers = [
+const athleteAnswers = [
     {
-        answerOne: "Erling Braut Haaland", AnswerTwo: "Karsten Warholm"
+        suggestionOne: "Erling Braut Haaland", suggestionTwo: "Karsten Warholm"
     },
     {
-        answerOne: "Golf", AnswerTwo: "Boksing"
+        suggestionOne: "Golf", suggestionTwo: "Boksing"
     },
     {
-        answerOne: "22 profesjonelle seiere", AnswerTwo: "29 profesjonelle seiere"
+        suggestionOne: "22 profesjonelle seiere", suggestionTwo: "29 profesjonelle seiere"
     },
     {
-        answerOne: "13", AnswerTwo: "11"
+        suggestionOne: "13", suggestionTwo: "11"
     },
     {
-        answerOne: "Karsten Warholm", AnswerTwo: "Erling Braut Haaland"
+        suggestionOne: "Karsten Warholm", suggestionTwo: "Erling Braut Haaland"
     },
 ];
-    
-premierLeagueQustions = [
+
+    export const athleteQandA = [...athleteQustions, ...athleteAnswers];
+
+const premierLeagueQustions = [
     {
         number: "1", question: ""
     },
@@ -56,23 +58,27 @@ premierLeagueQustions = [
     }
 ];
 
-premierLeagueAnswers = [
+const premierLeagueAnswers = [
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
     {
-        answerOne: "", AnswerTwo: ""
+        suggestionOne: "", suggestionTwo: ""
     },
 ];
+
+    export const premierLeagueQandA = [...premierLeagueQustions, ...premierLeagueAnswers];
+    
+//    export default {athleteQandA, premierLeagueQandA};

@@ -35,7 +35,7 @@
     console.log(athletesBio);
 
 
-    const sampledInformation = {...athletesArray, ...athletesBio};
+    const sampledInformation = [...athletesArray, ...athletesBio];
     console.log(sampledInformation);
 
     generateAthletesCard = () =>{

@@ -323,6 +323,7 @@ table {
 }
 .quiz__header {
   padding: 1rem;
+  font-weight: bold;
 }
 .quiz__box {
   display: flex;
@@ -333,8 +334,10 @@ table {
 }
 .quiz__btn {
   width: 40%;
-  height: 3rem;
+  height: 5rem;
   cursor: pointer;
+  background-color: yellowgreen;
+  border-radius: 0.5rem;
 }
 
 .modal {
@@ -387,6 +390,11 @@ table {
   width: 90%;
   padding: 0.5rem;
   border-radius: 1rem;
+}
+
+.quiz-btn:hover {
+  background-color: green;
+  transition: 1s;
 }
 
 .open-modal {
