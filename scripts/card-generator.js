@@ -3,7 +3,7 @@ import athletesInformation from "./athletesInformation.js";
 
 // Html elements
 
-const contentOutput = document.querySelector(".content-output");
+const contentOutput = document.querySelector("#content-output");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 const selectInput = document.querySelector("#filter-select");
@@ -19,7 +19,7 @@ const athletes = athletesInformation.athletesArray;
 
 // Searchbar function
 
-const searchFunction = (cards, color) => {
+const searchFunction = (cards, color, theme) => {
     searchBar.addEventListener("keyup", (e) => {
         const searchInput = e.target.value.toLowerCase();
         let searchResult = cards.filter( card => {
@@ -28,7 +28,8 @@ const searchFunction = (cards, color) => {
                     card.city.toLowerCase().includes(searchInput) 
                     );
             });
-            displayCards(searchResult, color);
+            displayCards(searchResult, color, theme);
+            flipCards();
     });
 }
 
@@ -121,7 +122,7 @@ const generateCards = (theme) => {
     switch(theme){
         case "premier-league":
             displayCards(premierLeague, primary, theme);
-            searchFunction(premierLeague, primary);
+            searchFunction(premierLeague, primary, theme);
             filterSelection(premierLeague, primary, theme);
             searchBar.placeholder = "Søk etter klubb eller by...";
             flipCards();

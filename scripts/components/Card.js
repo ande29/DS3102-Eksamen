@@ -3,8 +3,8 @@ const cardTemplate = document.createElement("template");
 cardTemplate.innerHTML = `
 
     <style>
-        article {
-            max-width: 370px;
+        .card {
+            width: 370px;
             height: 450px;
             box-shadow: inset 5px 5px 5px rgba(55, 0, 58, .2),
                         inset -5px -5px 15px rgba(69, 19, 73, .1),
@@ -22,12 +22,12 @@ cardTemplate.innerHTML = `
             cursor: pointer;
             transform-style: preserve-3d;
             transition: transform 1s;
-            
         }
         .flipped {
             transform: rotateY(180deg);
         }
         .inside-face{
+            overflow: hidden;
             border-radius: 15px;
             position: absolute;
             height: 100%;
@@ -60,9 +60,7 @@ cardTemplate.innerHTML = `
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border: 1px solid white;
             margin-top: 10px;
-
         }
         .inside__back .header h2{
             color: #eee;
