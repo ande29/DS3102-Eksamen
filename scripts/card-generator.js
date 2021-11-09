@@ -1,5 +1,5 @@
 import PremierLeagueModule from "./modules/PremierLeagueModule.js"
-import athletesArray from "./athletesInformation.js";
+import athletesInformation from "./athletesInformation.js";
 
 // Html elements
 
@@ -12,7 +12,10 @@ const searchBar = document.querySelector("#search-bar");
 
 // arrays
 
-let premierLeagueArray = PremierLeagueModule.getAllClubs();
+const premierLeague = PremierLeagueModule.getAllClubs();
+const athletes = athletesInformation.athletesArray;
+
+
 
 // Searchbar function
 
@@ -30,7 +33,7 @@ const searchFunction = (cards, color) => {
 }
 
 // Filter selection
-const filterSelection = (cards, color) => {
+const filterSelection = (cards, color, theme) => {
     selectInput.addEventListener("input", () => {
         let inputValue = selectInput.value;
         let output;
@@ -43,7 +46,7 @@ const filterSelection = (cards, color) => {
             })
         } 
         // ikke vunnet ligaen
-        if(inputValue === "Ikke vunnet Premier League"){
+        else if(inputValue === "Ikke vunnet Premier League"){
             output = cards.filter(card => {
                 card = (card.titles < 1);
                 return card;
@@ -66,26 +69,50 @@ const filterSelection = (cards, color) => {
             output = cards.sort((a,b) => a.age < b.age ? 1 : -1)
         }
         searchBar.value = "";
-        displayCards(output, color);
+        displayCards(output, color, theme);
+        flipCards();
     })
 }
 
 
+
+
 // Display cards
 
-const displayCards = (cards, color) => {
+const displayCards = (cards, color, theme) => {
     const htmlTxt = cards.map((card) => {
+        let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "som aldri har vunnet ligaen";
+
+        let plBio = `
+        ${card.name} er en engelsk fotballklubb fra byen ${card.city} som ble stiftet i ${card.founded}.
+        ${card.name} spiller sine hjemmekamper på ærverdige ${card.stadium} og ${hasWon}.
+        Deres nåværende manager er ${card.manager}.`;
+
+
+        
         return `
         <card-item
         name="${card.name}"
         imgUrl="card-logos/${card.img}"
         imgAlt="${card.name} logo"
         background="${color}"
+        bio="${theme === "premier-league" ? plBio : card.bio}"
         ></card-item>
         `;
-        
     })
     contentOutput.innerHTML = htmlTxt;
+}
+
+// flip cards
+
+const flipCards = () => {
+    let cards = document.querySelectorAll(".inside");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () =>{
+            card.classList.toggle("flipped");
+        })
+    })
 }
 
 // load cards
@@ -93,20 +120,37 @@ const displayCards = (cards, color) => {
 const generateCards = (theme) => {
     switch(theme){
         case "premier-league":
-            displayCards(premierLeagueArray, primary);
-            searchFunction(premierLeagueArray, primary);
-            filterSelection(premierLeagueArray, primary);
+            displayCards(premierLeague, primary, theme);
+            searchFunction(premierLeague, primary);
+            filterSelection(premierLeague, primary, theme);
             searchBar.placeholder = "Søk etter klubb eller by...";
+            flipCards();
             break;
             
             case "norwegian-athletes": 
-            displayCards(athletesArray, secondary);
-            searchFunction(athletesArray, secondary);
-            filterSelection(athletesArray, secondary);
+            displayCards(athletes, secondary, theme);
+            searchFunction(athletes, secondary);
+            filterSelection(athletes, secondary, theme);
             searchBar.placeholder = "Søk etter utøver eller idrett...";
+            flipCards();
             break;
         }
     }
 
 
 export default generateCards;
+
+
+
+
+/*
+        let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "som aldri har vunnet ligaen";
+        
+        let plBio = `
+        ${card.name} er en engelsk fotballklubb fra byen ${card.city} og som ble stiftet i ${card.founded}.
+        ${card.name} spiller sine hjemmekamper på ærverdige ${card.stadium} og ${hasWon}.
+        Deres nåværende manager er ${card.manager}.`;
+
+        let athletesBio = "";
+
+        */

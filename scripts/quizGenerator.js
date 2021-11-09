@@ -8,8 +8,8 @@ const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
 //const closeButton = document.querySelector(".close-btn");
 //closeButton.addEventListener("click", openModal);
-const openModal = () => { modal.classList.toggle("open-modal") };
- quizButton.addEventListener("click", openModal);
+//const openModal = () => { modal.classList.toggle("open-modal") };
+// quizButton.addEventListener("click", openModal);
 
 
 
