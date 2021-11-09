@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <script defer src="/scripts/main-navbar.js"></script>
     <script defer src="/scripts/quizStorage.js"></script>
+    <script defer src="/scripts/quizButtons.js"></script>
 </head>
 <body>
     <header class="page-header">
@@ -46,13 +47,13 @@
             <section class="user-section">  
                 <h2 class="user-header">Fyll inn informasjon</h2>
                 <article class="input-container">
-                    <select name="gender-select" id="gender-select">
+                    <select name="gender-select" class="select-cursor" id="gender-select">
                         <option value="Kvinne">Kvinne</option>
                         <option value="Mann">Mann</option>
                         <option value="Annet">Annet</option>
                     </select>
                     <input type="text" id="name-input" placeholder="skriv inn navn..">
-                    <input type="button" id="select-btn" value="Bekreft">
+                    <input type="button" class="select-cursor" id="select-btn" value="Bekreft">
                 </article>  
                 <article class="user-output">
                 </article>  
@@ -67,9 +68,16 @@
                     <h3 class="quiz__header">Test dine Ferdigheter om Norske Idretsutøvere</h3>
                     <button class="athlete-button quiz__btn">Start Quiz</button>
                 </article>
-                <div class="user-output">
+            </section>
+            <section class="modal">
+                <article class="modal-content">
+                    <h2 class="modal-header"></h2>
+                    <div class="question-content">
 
-                </div>
+                    </div>
+                    <button class="answer-no"></button>
+                    <button class="answer-yes"></button>
+                </article>
             </section>
     </main>
 
