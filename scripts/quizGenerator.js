@@ -19,8 +19,8 @@ const displayQuiz = (data, color) => {
             backgroundModal = "${color}"
             quizNumber = "${quiz.number}"
             quizQuestion = "${quiz.question}"
-            answerBtn = "${quiz.suggestionOne}"
-            answerBtn = "${quiz.suggestionTwo}"
+            answerBtn = "${quiz.answers.a}"
+            answerBtn = "${quiz.answers.b}"
             ></quiz-modal>
         `;
     })

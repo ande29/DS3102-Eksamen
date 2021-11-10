@@ -10,10 +10,10 @@ export const athleteQustions = [
     },
     {
         number: "2", question: "Hvilken idrett er Cecilia Brækhus blitt verdenskjent for?",
-            asnwers: {
-                a:"Golf",
-                b:"Boxing" 
-            },
+        answers: {
+            a:"Golf",
+            b:"Boxing" 
+        },
         correctAnswer: "b"
     },
     {

@@ -316,8 +316,7 @@ table {
   align-items: center;
   top: 0px;
   left: 0px;
-  visibility: hidden;
-  height: 100%;
+  height: 80%;
   width: 100%;
   background-color: rgba(55, 0, 58, 0.2);
 }
