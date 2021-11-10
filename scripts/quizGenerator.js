@@ -5,7 +5,8 @@ const modal = document.querySelector(".modal");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
-let theme, score, questionIndex;
+let  score;
+let questionIndex = 0;
 
 //const closeButton = document.querySelector(".close-btn");
 //closeButton.addEventListener("click", openModal);
@@ -19,11 +20,6 @@ const closeButton = document.querySelector(".close-btn");
 closeButton.addEventListener("click", openModal); 
 */
 
-
-
-const getTheme = (theme) => {
-    theme = theme;
-}
 
 const displayQuiz = (data, color) => {
     let htmlTxt = ``;
@@ -39,7 +35,8 @@ const displayQuiz = (data, color) => {
            next = "Next"
            ></quiz-modal>
            `;
-           console.log(val);
+           questionIndex++;
+           console.log(val, questionIndex);
    });
    modal.innerHTML = htmlTxt;
    
@@ -49,11 +46,11 @@ const displayQuiz = (data, color) => {
 const generateQuiz = (theme) => {
     switch(theme){
         case "premier-league":
-            getTheme(theme);
+            displayQuiz(premierLeagueQustions, primary);
             break;
         
         case "norwegian-athletes":
-            getTheme(theme);
+            displayQuiz(athleteQustions, secondary);
             break;
     }
 };

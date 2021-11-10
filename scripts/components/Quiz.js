@@ -4,7 +4,6 @@ quizTemplate.innerHTML = `
     <style>
     .modal-content{
         position: relative;
-        background-color:rgb(34, 33, 169);
         box-shadow:  10px 8px 5px rgba(55, 0, 58, .2);
         color: white;
         width: 400px;
@@ -92,7 +91,7 @@ class Quiz extends HTMLElement {
         this.appendChild(quizTemplate.content.cloneNode(true));
 
         const backgroundModal = this.getAttribute("backgroundModal");
-        this.querySelector(".modal-content").style = `background-color = ${backgroundModal}`;
+        this.querySelector(".modal-content").style = `background: ${backgroundModal}`;
 
         const quizNumber = this.getAttribute("quizNumber");
         this.querySelector(".question-number").innerHTML = `${quizNumber}`;
