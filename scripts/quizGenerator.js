@@ -23,26 +23,29 @@ closeButton.addEventListener("click", openModal);
 
 // functions
 
+
+// get quiz theme
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
 }
 
-const setStatus = (el, correct) => {
-    clearClassList(el);
+// start quiz
+const startQuiz = () => {
+    console.log(questionArray);
+    displayQuiz(questionArray, questionArrayColor);
+}   
 
-    if(correct){
-        el.classList.add("correct");
-    } else {
-        el.classList.add("wrong");
-    }
+// toggle next question
+const nextQuestion = (btn) => {
+    btn.addEventListener('click', () => {
+        questionIndex++;
+        console.log("i " + questionIndex)
+    })
 }
 
-const clearClassList = (el) => {
-    el.classList.remove('correct');
-    el.classList.remove('wrong');
-}
 
+// check answer 
 const checkAnswer = (answer, correct) => {
     if(answer === correct){
         score++;
@@ -51,11 +54,9 @@ const checkAnswer = (answer, correct) => {
         console.log("wrong! score: " + score)
     }
 }
-const startQuiz = () => {
-    console.log(questionArray);
-    displayQuiz(questionArray, questionArrayColor);
-}   
 
+
+// quiz display
 const displayQuiz = (data, color) => {
     let htmlTxt = "";
 
@@ -77,22 +78,22 @@ const displayQuiz = (data, color) => {
             `;
 
             modal.innerHTML = htmlTxt;
+
+
             const answerBtns = document.querySelectorAll(".answer-container button");
-            console.log(answerBtns)
-            
             answerBtns.forEach(btn => {
-                btn.addEventListener('click', () =>{
-                    console.log(btn.innerHTML);
-                    selectedOption = btn.innerHTML;
+                btn.addEventListener('click', (e) =>{
+                    selectedOption = e.target.innerHTML;
                     checkAnswer(selectedOption, correct)
                 });
             })
+            nextQuestion(document.querySelector('.next'))
         }
     })
 }
-startButton.addEventListener('click', startQuiz)
 
 // events
+startButton.addEventListener('click', startQuiz)
 
 
 
