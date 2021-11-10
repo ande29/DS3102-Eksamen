@@ -10,6 +10,9 @@ const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 //const openModal = () => { modal.classList.toggle("open-modal") };
 // quizButton.addEventListener("click", openModal);
 
+const startQuiz = () => {
+
+};
 
 
 const displayQuiz = (data, color) => {
@@ -21,6 +24,8 @@ const displayQuiz = (data, color) => {
             quizQuestion = "${quiz.question}"
             answerBtn = "${quiz.answers.a}"
             answerBtn = "${quiz.answers.b}"
+            restart = "Restart"
+            next = "Next"
             ></quiz-modal>
         `;
     })
