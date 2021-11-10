@@ -6,7 +6,7 @@ const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
 let  score = 0;
-let questionIndex = 1;
+let questionIndex = 0;
 let questionArray, questionArrayColor;
 
 //const closeButton = document.querySelector(".close-btn");
@@ -28,6 +28,7 @@ closeButton.addEventListener("click", openModal);
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
+    console.log(questionArray[questionIndex])
 }
 
 // start quiz
@@ -41,6 +42,8 @@ const nextQuestion = (btn) => {
     btn.addEventListener('click', () => {
         questionIndex++;
         console.log("i " + questionIndex)
+        console.log(questionArray[questionIndex])
+        displayQuiz(questionArray, questionArrayColor);
     })
 }
 
@@ -60,19 +63,17 @@ const checkAnswer = (answer, correct) => {
 const displayQuiz = (data, color) => {
     let htmlTxt = "";
 
-    data.forEach((val, i) => {
-        if(questionIndex === i+1){
-            let options = val.answers;
-            let correct = val.correctAnswer;
+            let options = data[questionIndex].answers;
+            let correct = data[questionIndex].correctAnswer;
             let selectedOption;
 
             htmlTxt = `
             <quiz-modal
             backgroundModal = "${color}"
             quizNumber = "${questionIndex + "/" + data.length}"
-            quizQuestion = "${val.question}"
-            answerA = "${val.answers.a}"
-            answerB = "${val.answers.b}"
+            quizQuestion = "${data[questionIndex].question}"
+            answerA = "${data[questionIndex].answers.a}"
+            answerB = "${data[questionIndex].answers.b}"
             score = "${score}"
             ></quiz-modal>
             `;
@@ -88,8 +89,6 @@ const displayQuiz = (data, color) => {
                 });
             })
             nextQuestion(document.querySelector('.next'))
-        }
-    })
 }
 
 // events
