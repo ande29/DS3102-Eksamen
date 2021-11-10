@@ -5,14 +5,15 @@ const modal = document.querySelector(".modal");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
-//const closeButton = document.querySelector(".close-btn");
-//closeButton.addEventListener("click", openModal);
-//const openModal = () => { modal.classList.toggle("open-modal") };
-// quizButton.addEventListener("click", openModal);
 
-const startQuiz = () => {
+/*
+const openModal = () => { modal.classList.toggle("open-modal") };
+quizButton.addEventListener("click", openModal);
+const closeButton = document.querySelector(".close-btn");
+closeButton.addEventListener("click", openModal); 
+*/
 
-};
+
 
 const displayQuiz = (data, color) => {
     let htmlTxt = ``;
@@ -31,24 +32,9 @@ const displayQuiz = (data, color) => {
            console.log(val);
    });
    modal.innerHTML = htmlTxt;
-}
-
-const displayQuizOne = (data, color) => {
-    const htmlTxt = data.map(quiz => {
-        return `
-           <quiz-modal
-            backgroundModal = "${color}"
-            quizNumber = "${quiz.number}"
-            quizQuestion = "${quiz.question}"
-            answerBtn = "${quiz.answers.a}"
-            answerBtn = "${quiz.answers.b}"
-            restart = "Restart"
-            next = "Next"
-            ></quiz-modal>
-        `;
-    })
-    modal.innerHTML = htmlTxt;
+   
 };
+
 
 const generateQuiz = (theme) => {
     switch(theme){
