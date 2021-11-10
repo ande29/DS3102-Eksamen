@@ -19,6 +19,7 @@ quizTemplate.innerHTML = `
     .close-btn{
         border: none;
         border-radius: 0.5rem;
+        cursor: pointer;
         top: 0%;
         left: 0%;
         background-color: rgb(34, 33, 169);
@@ -56,6 +57,7 @@ quizTemplate.innerHTML = `
         display:flex;
         align-items: flex-end;
         justify-content: space-between;
+        margin: 0.2rem;
     }
     .nav-btn{
         width: 20%;
