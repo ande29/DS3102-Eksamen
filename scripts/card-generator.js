@@ -82,7 +82,7 @@ const filterSelection = (cards, color, theme) => {
 
 const displayCards = (cards, color, theme) => {
     const htmlTxt = cards.map((card) => {
-        let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "som aldri har vunnet ligaen";
+        let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "har aldri vunnet ligaen";
 
         let plBio = `
         ${card.name} er en engelsk fotballklubb fra byen ${card.city} som ble stiftet i ${card.founded}.
@@ -101,6 +101,8 @@ const displayCards = (cards, color, theme) => {
         ></card-item>
         `;
     })
+    .join('');
+    
     contentOutput.innerHTML = htmlTxt;
 }
 
@@ -140,18 +142,3 @@ const generateCards = (theme) => {
 
 
 export default generateCards;
-
-
-
-
-/*
-        let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "som aldri har vunnet ligaen";
-        
-        let plBio = `
-        ${card.name} er en engelsk fotballklubb fra byen ${card.city} og som ble stiftet i ${card.founded}.
-        ${card.name} spiller sine hjemmekamper på ærverdige ${card.stadium} og ${hasWon}.
-        Deres nåværende manager er ${card.manager}.`;
-
-        let athletesBio = "";
-
-        */
