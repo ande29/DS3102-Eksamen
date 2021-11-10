@@ -67,19 +67,23 @@ quizTemplate.innerHTML = `
         <article class="modal-content">
             <button class="close-btn"><i class="fas fa-times"></i></button>
             <h2 class="modal-header"></h2>
+
             <div class="question-content">
                 <h2 class="question-number"></h2>
                 <p class="question-output"></p>
             </div>
+
             <div class="answer-container">
                 <button class="answer-a quiz-btn"></button>
                 <button class="answer-b quiz-btn"></button>
             </div>
+
             <div class="navigation-container">
-                <button class="restart nav-btn">Restart></button>
+                <button class="restart nav-btn">Restart</button>
                 <p class="score"></p>
-                <button class="next nav-btn">Next></button>
+                <button class="next nav-btn">Next</button>
             </div>
+
         </article>
 
 `;
@@ -105,14 +109,8 @@ class Quiz extends HTMLElement {
         const answerB = this.getAttribute("answerB");
         this.querySelector(".answer-b").innerHTML = `${answerB}`;
 
-        const restart = this.getAttribute("restart");
-        this.querySelector(".restart").innerHTML = `${restart}`;
-
         const score = this.getAttribute("score");
         this.querySelector(".score").innerHTML = `${score}`;
-
-        const next = this.getAttribute("next");
-        this.querySelector(".next").innerHTML = `${next}`;
     }
 };
 

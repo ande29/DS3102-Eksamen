@@ -3,10 +3,10 @@ export const athleteQustions = [
     {
         number: "1", question: "Hvilken norsk idrettsstjerne spiller fotball i Tyskland?",
         answers:{
-            a: "Erlig Braut Haaland",
+            a: "Erling Braut Haaland",
             b: "Karsten Warholm"
         },
-        correctAnswer: "a"
+        correctAnswer: "Erling Braut Haaland"
     },
     {
         number: "2", question: "Hvilken idrett er Cecilia Brækhus blitt verdenskjent for?",
@@ -14,7 +14,7 @@ export const athleteQustions = [
             a:"Golf",
             b:"Boxing" 
         },
-        correctAnswer: "b"
+        correctAnswer: "Boxing"
     },
     {
         number: "3", question: "Hvor mange profesjonelle seiere har Suzann Pettersen i golf?",
@@ -22,7 +22,7 @@ export const athleteQustions = [
             a: "22",
             b: "29"
         },
-        correctAnswer: "a"
+        correctAnswer: "22"
     },
     {
         number: "4", question: "Hvor mange år var Magnus Carlsen da han ble stormester i sjakk?",
@@ -30,7 +30,7 @@ export const athleteQustions = [
             a: "16",
             b: "13"
         },
-        correctAnswer:"b"
+        correctAnswer:"13"
     },
     {
         number: "5", question: "Hvilken norsk idrettsjerne vant VM-gull i friidrett?",
@@ -38,7 +38,7 @@ export const athleteQustions = [
             a: "Karsten Warholm",
             b: "Erling Braut Haaland"
         },
-        correctAnswer: "a"
+        correctAnswer: "Karsten Warholm"
     },
 ];
 
@@ -53,7 +53,7 @@ export const premierLeagueQustions = [
         correctAnswer: ""
     },
     {
-        number: "1", question: "",
+        number: "2", question: "",
         answers: {
             a: "",
             b: ""
@@ -61,7 +61,7 @@ export const premierLeagueQustions = [
         correctAnswer: ""
     },
     {
-        number: "1", question: "",
+        number: "3", question: "",
         answers: {
             a: "",
             b: ""
@@ -69,7 +69,7 @@ export const premierLeagueQustions = [
         correctAnswer: ""
     },
     {
-        number: "1", question: "",
+        number: "4", question: "",
         answers: {
             a: "",
             b: ""
@@ -77,7 +77,7 @@ export const premierLeagueQustions = [
         correctAnswer: ""
     },
     {
-        number: "1", question: "",
+        number: "5", question: "",
         answers: {
             a: "",
             b: ""
