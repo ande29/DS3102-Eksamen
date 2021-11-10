@@ -42,4 +42,13 @@ Gsap
 dry -- check 
 
 QUIZSIDEN:
-Lage en funksjon som starter valg quiz -- kjører Komponentet og genrer HMTL. 
+Lage en funksjon som starter valg quiz, random rekkefølge -- kjører Komponentet og genrer HMTL. 
+Start button basert på tema
+start button åpner Quizsiden.
+eventlistneres på alle knappene (svaralt, reset og next, og close);
+incrementer på score. 
+next button funksjons
+restart funksjon
+display score med beskjed - legges inn i localstorage.
+
+Scorebord, hente navn og scor fra localstorage, legge inn i en LI. 

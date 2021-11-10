@@ -14,8 +14,26 @@ const startQuiz = () => {
 
 };
 
-
 const displayQuiz = (data, color) => {
+    let htmlTxt = ``;
+   Object.values(data).forEach(val => {
+           htmlTxt = `
+           <quiz-modal
+           backgroundModal = "${color}"
+           quizNumber = "${val.number}"
+           quizQuestion = "${val.question}"
+           answerA = "${val.answers.a}"
+           answerB = "${val.answers.b}"
+           restart = "Restart"
+           next = "Next"
+           ></quiz-modal>
+           `;
+           console.log(val);
+   });
+   modal.innerHTML = htmlTxt;
+}
+
+const displayQuizOne = (data, color) => {
     const htmlTxt = data.map(quiz => {
         return `
            <quiz-modal

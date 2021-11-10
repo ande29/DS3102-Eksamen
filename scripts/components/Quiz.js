@@ -17,7 +17,8 @@ quizTemplate.innerHTML = `
         border-radius: 1rem;
     }
     .close-btn{
-        position: relativ;
+        border: none;
+        border-radius: 0.5rem;
         top: 0%;
         left: 0%;
         background-color: rgb(34, 33, 169);
@@ -70,8 +71,8 @@ quizTemplate.innerHTML = `
                 <p class="question-output"></p>
             </div>
             <div class="answer-container">
-                <button class="answer-btn quiz-btn"></button>
-                <button class="answer-btn quiz-btn"></button>
+                <button class="answer-a quiz-btn"></button>
+                <button class="answer-b quiz-btn"></button>
             </div>
             <div class="navigation-container">
                 <button class="restart nav-btn">Restart></button>
@@ -97,8 +98,11 @@ class Quiz extends HTMLElement {
         const quizQuestion = this.getAttribute("quizQuestion");
         this.querySelector(".question-output").innerHTML = `${quizQuestion}`;
 
-        const answerBtn = this.getAttribute("answerBtn");
-        this.querySelector(".answer-btn").innerHTML = `${answerBtn}`;
+        const answerA = this.getAttribute("answerA");
+        this.querySelector(".answer-a").innerHTML = `${answerA}`;
+
+        const answerB = this.getAttribute("answerB");
+        this.querySelector(".answer-b").innerHTML = `${answerB}`;
 
         const restart = this.getAttribute("restart");
         this.querySelector(".restart").innerHTML = `${restart}`;
