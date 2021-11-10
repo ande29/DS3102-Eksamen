@@ -16,13 +16,12 @@ quizTemplate.innerHTML = `
         border-radius: 1rem;
     }
     .close-btn{
+        position: absolute;
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
         top: 0%;
         left: 0%;
-        background-color: rgb(34, 33, 169);
-        color: white;
     }
     .quiz-btn:hover{
         background-color: green;
