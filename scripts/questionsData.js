@@ -1,5 +1,5 @@
 
-const athleteQustions = [
+export const athleteQustions = [
     {
         number: "1", question: "Hvilken norsk idrettsstjerne spiller fotball i Tyskland?",
         answers:{
@@ -43,7 +43,7 @@ const athleteQustions = [
 ];
 
 
-const premierLeagueQustions = [
+export const premierLeagueQustions = [
     {
         number: "1", question: "",
         answers: {

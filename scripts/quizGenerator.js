@@ -1,5 +1,4 @@
-import {athleteQandA, premierLeagueQandA} from "./questionsData.js";
-
+import {athleteQustions, premierLeagueQustions} from './questionsData.js';
 const quizButton = document.querySelector(".quiz__btn");
 
 const modal = document.querySelector(".modal");
@@ -31,11 +30,11 @@ const displayQuiz = (data, color) => {
 const generateQuiz = (theme) => {
     switch(theme){
         case "premier-league":
-            displayQuiz(premierLeagueQandA, primary);
+            displayQuiz(premierLeagueQustions, primary);
             break;
         
         case "norwegian-athletes":
-            displayQuiz(athleteQandA, secondary);
+            displayQuiz(athleteQustions, secondary);
             break;
     }
 };
