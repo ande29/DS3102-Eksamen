@@ -1,4 +1,5 @@
 import {athleteQustions, premierLeagueQustions} from './questionsData.js';
+
 const startButton = document.querySelector(".quiz__start-btn");
 
 const modal = document.querySelector(".modal");
@@ -29,13 +30,19 @@ const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
     console.log(questionArray[questionIndex])
+
+    startQuiz(startButton);
 }
 
-// start quiz
-const startQuiz = () => {
-    console.log(questionArray);
-    displayQuiz(questionArray, questionArrayColor);
-}   
+//start quiz
+const startQuiz = (e) => {
+    e.addEventListener('click', () => {
+        console.log(questionArray);
+        displayQuiz(questionArray, questionArrayColor);
+        modal.style.display = "flex";
+    })
+} 
+
 
 // toggle next question
 const nextQuestion = (btn) => {
@@ -92,7 +99,8 @@ const displayQuiz = (data, color) => {
 }
 
 // events
-startButton.addEventListener('click', startQuiz)
+
+
 
 
 

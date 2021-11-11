@@ -16,7 +16,6 @@ const premierLeague = PremierLeagueModule.getAllClubs();
 const athletes = athletesInformation.athletesArray;
 
 
-
 // Searchbar function
 
 const searchFunction = (cards, color, theme) => {
