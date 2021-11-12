@@ -10,9 +10,10 @@ const displayScore = () => {
     highscores.forEach(name => {
         console.log(name.name)
         htmlTxt += `
-            <li>${name.name}</li>
+            <li style="list-style:number">${name.name}</li>
        ` 
     });
+    document.querySelector(".fa-crown").style.visibility = "visible";
     highscoreTable.innerHTML = htmlTxt;
 }
 
