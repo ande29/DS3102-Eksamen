@@ -13,6 +13,7 @@ const displayScore = () => {
             <li>${name.name}</li>
        ` 
     });
+    document.querySelector(".fa-crown").style.visibility = "visible";
     highscoreTable.innerHTML = htmlTxt;
 }
 
