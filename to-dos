@@ -3,19 +3,19 @@ o Mobile (0-576px): 1 column of information
 o Tablet (577-970px): 2 or 3 columns of information 
 o Desktop (971+ px): 3 or 4 columns of information
 Landing Page 
-kortet til informasjonsiden                                     
-Flip Cards på idrettsstjerner
+kortet til informasjonsiden   --- check                                  
+Flip Cards på idrettsstjerner --- check
 Banner -- check
 Navbar  -- check
 filter & inputfelt -- check
-animasjoner // KEyframes eller Gsap
+animasjoner // KEyframes eller Gsap 
 
 Quizsiden:
 Egen banner til quiz -- check
 -> input til navn og kjønn (Lagres i localstorage) -- check
 ptag til velkommen bruker -- check
 Button til å velge quiz 
-(Pop up) side når quiz er valgt. Med Banner, navn, riktig spm og antall spm
+(Pop up) side når quiz er valgt. Med Banner, navn, riktig spm og antall spm --- check
 animasjoner 
 
 Funksjoner: 
@@ -42,13 +42,13 @@ Gsap
 dry -- check 
 
 QUIZSIDEN:
-Lage en funksjon som starter valg quiz, random rekkefølge -- kjører Komponentet og genrer HMTL. 
-Start button basert på tema
-start button åpner Quizsiden.
+Lage en funksjon som starter valg quiz, random rekkefølge -- kjører Komponentet og genrer HMTL. --- check
+Start button basert på tema --- check
+start button åpner Quizsiden. --- check
 eventlistneres på alle knappene (svaralt, reset og next, og close);
-incrementer på score. 
-next button funksjons
-restart funksjon
-display score med beskjed - legges inn i localstorage.
+incrementer på score. --- check
+next button funksjons --- check
 
-Scorebord, hente navn og scor fra localstorage, legge inn i en LI. 
+
+display score med beskjed - legges inn i localstorage.
+Scorebord, hente navn og score fra localstorage, legge inn i en LI. 

@@ -77,7 +77,7 @@ const displayQuiz = (data, color) => {
             htmlTxt = `
             <quiz-modal
             backgroundModal = "${color}"
-            quizNumber = "${questionIndex + "/" + data.length}"
+            quizNumber = "${questionIndex+1 + "/" + data.length}"
             quizQuestion = "${data[questionIndex].question}"
             answerA = "${data[questionIndex].answers.a}"
             answerB = "${data[questionIndex].answers.b}"
