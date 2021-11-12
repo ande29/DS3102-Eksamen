@@ -12,15 +12,14 @@ const userOutput = document.querySelector(".user-output");
     },
     ];
     localStorage.setItem("users", JSON.stringify(addAdming));      
-}
+}*/
+    let userObj = [];
 
 if(localStorage.getItem("users")){
-    addAdming = JSON.parse(localStorage.getItem("users"))
+    userObj = JSON.parse(localStorage.getItem("users"))
 }else{
-    (
-        () => adminStorage()
-    )();
-}*/
+        userObj;
+}
 
 let storeUser = () => {
     getUserInfo;
@@ -28,7 +27,6 @@ let storeUser = () => {
     let users = JSON.parse(localStorage.getItem("users"));
 
 }
-    let userObj = [];
 
 const getUserInfo = () => {
     if(nameInput.value.length > 0){

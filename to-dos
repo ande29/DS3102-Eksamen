@@ -49,6 +49,9 @@ eventlistneres på alle knappene (svaralt, reset og next, og close);
 incrementer på score. --- check
 next button funksjons --- check
 
-
+reset funksjon ved closing av quiz.  --- check
+poeng på summeres og legges i localstorage
+sorteres etter highest score. 
+submit/ferdig side med knapp. 
 display score med beskjed - legges inn i localstorage.
 Scorebord, hente navn og score fra localstorage, legge inn i en LI. 
