@@ -25,8 +25,24 @@ const startQuiz = (e) => {
     e.addEventListener('click', () => {
         displayQuiz(questionArray, questionArrayColor);
         modal.style.display = "flex";
+        e.disabled = true;
     })
 } 
+
+const closeQuiz = (btn) => {
+    btn.addEventListener("click", () => {
+        modal.style.display = "none";
+        questionIndex = 0;
+        startButton.disabled = false;
+    })
+}
+
+const restartQuiz = (e) => {
+    e.addEventListener("click", () => {
+        displayQuiz(questionArray, questionArrayColor);
+        questionIndex = 0;
+    })
+}
 
 // answer selection
 const selectAnswer = (btns, correct) => {
@@ -100,7 +116,8 @@ const displayQuiz = (data, color) => {
             modal.innerHTML = htmlTxt;
 
             selectAnswer(document.querySelectorAll(".answer-container button"), correct);
-            nextQuestion(document.querySelector('.next'))
+            nextQuestion(document.querySelector('.next'));
+            closeQuiz(document.querySelector(".close-btn"));
 }
 
 // events
