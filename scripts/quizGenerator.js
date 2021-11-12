@@ -9,6 +9,7 @@ const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 let  score = 0;
 let questionIndex = 0;
 let questionArray, questionArrayColor, quizLength;
+let selectedOption, correctAnswer;
 
 // functions
 // get quiz theme
@@ -33,6 +34,7 @@ const closeQuiz = (btn) => {
     btn.addEventListener("click", () => {
         modal.style.display = "none";
         questionIndex = 0;
+        score = 0;
         startButton.disabled = false;
     })
 }
@@ -45,8 +47,7 @@ const restartQuiz = (e) => {
 }
 
 // answer selection
-const selectAnswer = (btns, correct) => {
-    let selectedOption;
+const selectAnswer = (btns) => {
     let next = document.querySelector('.next');
     next.disabled = true;
     
@@ -66,15 +67,25 @@ const selectAnswer = (btns, correct) => {
     })
 }
 
+// check answer 
+const checkAnswer = (answer, correct) => {
+    if(answer === correct){
+        score++;
+        console.log("correct! score: " + score)
+    } else{
+        console.log("wrong! score: " + score)
+    }
+}
 
 // toggle next question
 const nextQuestion = (btn) => {
     questionIndex++;
-    console.log(questionIndex+1 + " " + quizLength)
     btn.addEventListener('click', () => {
         if(questionIndex+1 <= quizLength){
             console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
             console.log(questionArray[questionIndex])
+            
+            checkAnswer(selectedOption, correctAnswer)
             displayQuiz(questionArray, questionArrayColor);
         } else if(questionIndex+1 > quizLength){
             alert("score: ", score);
@@ -83,14 +94,6 @@ const nextQuestion = (btn) => {
 }
 
 
-// check answer 
-const checkAnswer = (answer, correct) => {
-    if(answer === correct){
-        console.log("correct! score: " + score)
-    } else{
-        console.log("wrong! score: " + score)
-    }
-}
 
 
 // quiz display
@@ -98,9 +101,7 @@ const displayQuiz = (data, color) => {
     let htmlTxt = "";
 
             quizLength = data.length;
-            let options = data[questionIndex].answers;
-            let correct = data[questionIndex].correctAnswer;
-            let selectedOption;
+            correctAnswer = data[questionIndex].correctAnswer;
 
             htmlTxt = `
             <quiz-modal
@@ -115,7 +116,7 @@ const displayQuiz = (data, color) => {
 
             modal.innerHTML = htmlTxt;
 
-            selectAnswer(document.querySelectorAll(".answer-container button"), correct);
+            selectAnswer(document.querySelectorAll(".answer-container button"), correctAnswer);
             nextQuestion(document.querySelector('.next'));
             closeQuiz(document.querySelector(".close-btn"));
 }
