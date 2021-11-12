@@ -41,7 +41,6 @@ const closeQuiz = (btn) => {
 
 const restartQuiz = (e) => {
     e.addEventListener("click", () => {
-        displayQuiz(questionArray, questionArrayColor);
         questionIndex = 0;
     })
 }
@@ -61,8 +60,6 @@ const selectAnswer = (btns) => {
                 next.disabled = false;
             }
             btn.classList.add("selected");
-            
-            console.log(!selectedOption, selectedOption)
         });
     })
 }
@@ -93,6 +90,7 @@ const nextQuestion = (btn) => {
     })
 }
 
+// end quiz / submit quiz
 
 
 
