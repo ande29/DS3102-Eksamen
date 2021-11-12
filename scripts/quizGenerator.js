@@ -8,23 +8,9 @@ const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
 let  score = 0;
 let questionIndex = 0;
-let questionArray, questionArrayColor;
-
-//const closeButton = document.querySelector(".close-btn");
-//closeButton.addEventListener("click", openModal);
-//const openModal = () => { modal.classList.toggle("open-modal") };
-// quizButton.addEventListener("click", openModal);
-
-/*
-const openModal = () => { modal.classList.toggle("open-modal") };
-quizButton.addEventListener("click", openModal);
-const closeButton = document.querySelector(".close-btn");
-closeButton.addEventListener("click", openModal); 
-*/
+let questionArray, questionArrayColor, quizLength;
 
 // functions
-
-
 // get quiz theme
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
@@ -37,20 +23,46 @@ const getTheme = (theme) => {
 //start quiz
 const startQuiz = (e) => {
     e.addEventListener('click', () => {
-        console.log(questionArray);
         displayQuiz(questionArray, questionArrayColor);
         modal.style.display = "flex";
     })
 } 
 
+// answer selection
+const selectAnswer = (btns, correct) => {
+    let selectedOption;
+    let next = document.querySelector('.next');
+    next.disabled = true;
+    
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) =>{
+            selectedOption = e.target.innerHTML;
+            if(selectedOption){
+                btns.forEach(btn=>{
+                    btn.classList.remove("selected")
+                })
+                next.disabled = false;
+            }
+            btn.classList.add("selected");
+            
+            console.log(!selectedOption, selectedOption)
+        });
+    })
+}
+
 
 // toggle next question
 const nextQuestion = (btn) => {
+    questionIndex++;
+    console.log(questionIndex+1 + " " + quizLength)
     btn.addEventListener('click', () => {
-        questionIndex++;
-        console.log("i " + questionIndex)
-        console.log(questionArray[questionIndex])
-        displayQuiz(questionArray, questionArrayColor);
+        if(questionIndex+1 <= quizLength){
+            console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
+            console.log(questionArray[questionIndex])
+            displayQuiz(questionArray, questionArrayColor);
+        } else if(questionIndex+1 > quizLength){
+            alert("score: ", score);
+        }
     })
 }
 
@@ -58,7 +70,6 @@ const nextQuestion = (btn) => {
 // check answer 
 const checkAnswer = (answer, correct) => {
     if(answer === correct){
-        score++;
         console.log("correct! score: " + score)
     } else{
         console.log("wrong! score: " + score)
@@ -70,6 +81,7 @@ const checkAnswer = (answer, correct) => {
 const displayQuiz = (data, color) => {
     let htmlTxt = "";
 
+            quizLength = data.length;
             let options = data[questionIndex].answers;
             let correct = data[questionIndex].correctAnswer;
             let selectedOption;
@@ -77,7 +89,7 @@ const displayQuiz = (data, color) => {
             htmlTxt = `
             <quiz-modal
             backgroundModal = "${color}"
-            quizNumber = "${questionIndex + "/" + data.length}"
+            quizNumber = "${questionIndex+1 + "/" + data.length}"
             quizQuestion = "${data[questionIndex].question}"
             answerA = "${data[questionIndex].answers.a}"
             answerB = "${data[questionIndex].answers.b}"
@@ -87,14 +99,7 @@ const displayQuiz = (data, color) => {
 
             modal.innerHTML = htmlTxt;
 
-
-            const answerBtns = document.querySelectorAll(".answer-container button");
-            answerBtns.forEach(btn => {
-                btn.addEventListener('click', (e) =>{
-                    selectedOption = e.target.innerHTML;
-                    checkAnswer(selectedOption, correct)
-                });
-            })
+            selectAnswer(document.querySelectorAll(".answer-container button"), correct);
             nextQuestion(document.querySelector('.next'))
 }
 

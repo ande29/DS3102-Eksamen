@@ -320,6 +320,25 @@ table {
   width: 100%;
 }
 
+.selected {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+
+.correct {
+  background-color: darkgreen;
+  color: whitesmoke;
+}
+
+.wrong {
+  background-color: darkred;
+  color: whitesmoke;
+}
+
 /*
 .modal-content{
 
@@ -360,13 +379,14 @@ table {
     background-color: green;
     transition: 1s;
 }
-.open-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
 */
+.open-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 card-item {
   width: 400px;
 }

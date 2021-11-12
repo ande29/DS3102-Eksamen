@@ -24,7 +24,7 @@ quizTemplate.innerHTML = `
         left: 0%;
     }
     .quiz-btn:hover{
-        background-color: green;
+        background-color: rgba(255, 255, 255 ,.1);
         transition: 1s;
     }
     .question-content{
@@ -46,7 +46,6 @@ quizTemplate.innerHTML = `
     .quiz-btn{
         width: 50%;
         height: 40%;
-        //background-color: rgb(34, 33, 169);
         border-radius: 1rem;
 
     }
