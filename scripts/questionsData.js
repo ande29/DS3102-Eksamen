@@ -45,43 +45,43 @@ export const athleteQustions = [
 
 export const premierLeagueQustions = [
     {
-        number: "1", question: "",
+        number: "1", question: "Hvilken klubb har vunnet ligaen flest ganger siden oppstarten i 1992?",
         answers: {
-            a: "",
-            b: ""
+            a: "Manchester City",
+            b: "Manchester United"
         },
-        correctAnswer: ""
+        correctAnswer: "Manchester United"
     },
     {
-        number: "2", question: "",
+        number: "2", question: "Hvilken by tilhører Chelsea?",
         answers: {
-            a: "",
-            b: ""
+            a: "London",
+            b: "Chelsworth"
         },
-        correctAnswer: ""
+        correctAnswer: "London"
     },
     {
-        number: "3", question: "",
+        number: "3", question: `Hvilke klubber møtes i  "Merseyside derby"?`,
         answers: {
-            a: "",
-            b: ""
+            a: "Liverpool - Manchester United",
+            b: "Liverpool - Everton"
         },
-        correctAnswer: ""
+        correctAnswer: "Liverpool - Everton"
     },
     {
-        number: "4", question: "",
+        number: "4", question: "Hvilken klubb vant ligaen forrige sesong, 2019-2020?",
         answers: {
-            a: "",
-            b: ""
+            a: "Manchester City",
+            b: "Liverpool"
         },
-        correctAnswer: ""
+        correctAnswer: "Manchester City"
     },
     {
-        number: "5", question: "",
+        number: "5", question: "Hvor mange klubber tilhører hovedstaden, London?",
         answers: {
-            a: "",
-            b: ""
+            a: "3",
+            b: "6"
         },
-        correctAnswer: ""
+        correctAnswer: "6"
     }
 ];

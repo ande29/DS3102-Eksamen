@@ -1,6 +1,6 @@
 import generateCards from "../card-generator.js";
 import selectOptions from "../filter.js";
-import generateQuiz from "../quizGenerator.js";
+import getTheme from "../quizGenerator.js";
 // variables
 const bannerContainer = document.querySelector(".banner-container");
 const activeWindow = window.document.title;
@@ -20,7 +20,7 @@ const toggleClass = (tab, tabs, theme) => {
         selectOptions(theme);     
     } 
     if(activeWindow === "Quiz"){
-        generateQuiz(theme);
+        getTheme(theme);
     }
 
     generateBanner(theme);
