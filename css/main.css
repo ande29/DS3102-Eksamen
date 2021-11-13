@@ -344,11 +344,12 @@ table {
   position: fixed;
   justify-content: center;
   align-items: center;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   display: none;
-  height: 80%;
+  height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .selected {
@@ -357,8 +358,7 @@ table {
 }
 
 /*
-.modal-content{
-
+.modal-content{   
     box-shadow:  10px 8px 5px rgba(55, 0, 58, .2);
     color: white;
     width: 50%;

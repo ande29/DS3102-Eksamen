@@ -61,7 +61,7 @@ export const premierLeagueQustions = [
         correctAnswer: "London"
     },
     {
-        number: "3", question: `Hvilke klubber møtes i  "Merseyside derby"?`,
+        number: "3", question: "Hvilke klubber møtes i  Merseyside derby?",
         answers: {
             a: "Liverpool - Manchester United",
             b: "Liverpool - Everton"
