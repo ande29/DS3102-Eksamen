@@ -3,7 +3,7 @@ const quizTemplate = document.createElement("template");
 quizTemplate.innerHTML = `
     <style>
     .modal-content{
-        width: 100%;
+        width: 100vw;
         position: relative;
         box-shadow:  10px 8px 5px rgba(55, 0, 58, .2);
         color: white;
@@ -68,14 +68,18 @@ quizTemplate.innerHTML = `
     }
     .navigation-container{
         width: 100%;
-        display:flex;
-        align-items: flex-end;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         margin: 0.2rem;
+        height: 50px;
+        align-content: center;
+        flex-direction: row;
     }
     .nav-btn{
         width: 20%;
         border-radius: 0.5rem;
+        height: 100%
     }
     .result-content{
         width: 100%;
@@ -105,6 +109,7 @@ quizTemplate.innerHTML = `
     .exit-btn:hover{
         border: 1px solid white;
         color: white;
+        background: rgba(255, 255, 255, .1);
         transition: .5s;
     }
     </style>

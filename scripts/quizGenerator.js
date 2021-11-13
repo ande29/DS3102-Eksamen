@@ -2,7 +2,6 @@ import {athleteQustions, premierLeagueQustions} from './questionsData.js';
 
 const startButton = document.querySelector(".quiz__start-btn");
 const modal = document.querySelector(".modal");
-const result = document.querySelector(".result");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 
@@ -70,17 +69,17 @@ const checkAnswer = (answer, correct) => {
 // toggle next question
 const nextQuestion = (btn) => {
     questionIndex++;
-
+    
     btn.addEventListener('click', () => {
         if(questionIndex+1 <= quizLength){
-            console.log(questionArray[questionIndex])
-            
+            console.log(questionArray[questionIndex])          
             checkAnswer(selectedOption, correctAnswer)
             gameHandler();
             console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
         } else if(questionIndex+1 > quizLength){
             checkAnswer(selectedOption, correctAnswer)
             startButton.disabled = false;
+            console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
             displayResult();
         }
     })
@@ -88,9 +87,11 @@ const nextQuestion = (btn) => {
 
 // end quiz / submit quiz
 const displayResult = () => {
+    displayQuiz(questionArray, questionArrayColor);
     quizContainer.style.display = "none";
     resultContainer.style.display = "block";
     closeQuiz(document.querySelector('.exit-btn'));
+    
 }
 
 
@@ -98,24 +99,31 @@ const displayResult = () => {
 const displayQuiz = (data, color) => {    
     let htmlTxt = "";
     let resultMsg = score > 3 ? "Godt jobbet!" : "Du kan bedre...";
-
     quizLength = data.length;
-    correctAnswer = data[questionIndex].correctAnswer;
 
-    
-    htmlTxt = `
-    <quiz-modal
-    backgroundModal = "${color}"
-    quizNumber = "${questionIndex+1 + "/" + quizLength}"
-    quizQuestion = "${data[questionIndex].question}"
-    answerA = "${data[questionIndex].answers.a}"
-    answerB = "${data[questionIndex].answers.b}"
-    player = "playername"
-    score = "Score: ${score}"
-    resultHeader = "${resultMsg}"
-    resultMsg = "Du fikk ${score} poeng av ${quizLength} mulige"
-    ></quiz-modal>
-    `;
+    if(questionIndex < quizLength){
+        correctAnswer = data[questionIndex].correctAnswer;
+        
+        htmlTxt = `
+        <quiz-modal
+        backgroundModal = "${color}"
+        quizNumber = "${questionIndex+1 + "/" + quizLength}"
+        quizQuestion = "${data[questionIndex].question}"
+        answerA = "${data[questionIndex].answers.a}"
+        answerB = "${data[questionIndex].answers.b}"
+        player = "playername"
+        score = "Score: ${score}"
+        ></quiz-modal>
+        `;
+    } else {
+        htmlTxt = `
+        <quiz-modal
+        backgroundModal = "${color}"
+        resultHeader = "${resultMsg}"
+        resultMsg = "Du fikk ${score} poeng av ${quizLength} mulige"
+        ></quiz-modal>
+        `;
+    }
     
     modal.innerHTML = htmlTxt;
     resultContainer = document.querySelector('.result-content');
