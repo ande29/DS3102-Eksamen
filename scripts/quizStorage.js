@@ -13,7 +13,7 @@ const userOutput = document.querySelector(".user-output");
     ];
     localStorage.setItem("users", JSON.stringify(addAdming));      
 }*/
-    let userObj = [];
+let userObj = [];
 
 if(localStorage.getItem("users")){
     userObj = JSON.parse(localStorage.getItem("users"))

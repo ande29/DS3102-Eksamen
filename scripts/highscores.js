@@ -7,14 +7,24 @@ console.log(highscores)
 
 const displayScore = () => {
     let htmlTxt = ``;
-    highscores.forEach(name => {
-        console.log(name.name)
-        htmlTxt += `
-            <li>${name.name}</li>
-       ` 
-    });
-    document.querySelector(".fa-crown").style.visibility = "visible";
-    highscoreTable.innerHTML = htmlTxt;
+        highscores.forEach(name => {
+            console.log(name.name)
+            htmlTxt += `
+                <li>${name.name}</li>
+           ` 
+        });
+        document.querySelector(".fa-crown").style.visibility = "visible";
+        highscoreTable.innerHTML = htmlTxt;
 }
 
-highScoreBtn.addEventListener("click", displayScore);
+const findPlayer = () => {
+    let playerName = JSON.parse(localStorage.getItem("users"));
+    let player = [...playerName.slice(-1)]
+    
+    player.forEach(name => {
+        let play = name.name
+        console.log(play)
+    })
+    console.log( player)
+}
+highScoreBtn.addEventListener("click", findPlayer);

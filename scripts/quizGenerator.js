@@ -9,8 +9,20 @@ let quizContainer, resultContainer;
 let  score, questionIndex;
 let questionArray, questionArrayColor, quizLength;
 let selectedOption, correctAnswer;
+let player;
+console.log(player)
+
 
 // functions
+const findPlayer = () => {
+    let playerNameArray = JSON.parse(localStorage.getItem("users"));
+    let playerName = [...playerNameArray.slice(-1)]
+
+    playerName.forEach(name => {
+        player = name.name
+        console.log(player)
+    })
+}
 // get quiz theme
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
@@ -27,6 +39,7 @@ const startQuiz = (e) => {
         modal.style.display = "flex";
         e.disabled = true;
         gameHandler();
+        findPlayer();
     })
 } 
 
@@ -100,6 +113,7 @@ const displayQuiz = (data, color) => {
     let htmlTxt = "";
     let resultMsg = score > 3 ? "Godt jobbet!" : "Du kan bedre...";
     quizLength = data.length;
+    let playerName = player
 
     if(questionIndex < quizLength){
         correctAnswer = data[questionIndex].correctAnswer;
@@ -111,7 +125,7 @@ const displayQuiz = (data, color) => {
         quizQuestion = "${data[questionIndex].question}"
         answerA = "${data[questionIndex].answers.a}"
         answerB = "${data[questionIndex].answers.b}"
-        player = "playername"
+        player = "${playerName}"
         score = "Score: ${score}"
         ></quiz-modal>
         `;
@@ -138,5 +152,7 @@ const gameHandler = () => {
     closeQuiz(document.querySelector(".close-btn"));
 }
 
+const addScore = () => {
 
+}
 export default getTheme;
