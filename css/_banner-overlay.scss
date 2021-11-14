@@ -15,4 +15,27 @@
             padding: 10px;
         }
     }
+
+    .home-banner{
+        height: 400px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        background: linear-gradient(90deg, rgba(77,27,78,1) 0%, rgba(31,64,200,1) 100%);
+        color: white;
+
+        span{
+            width: 150px;
+            border: 1px solid white;
+            padding: 15px;
+            margin: 15px auto;
+            font-weight: 600;
+            font-size: 3.5rem;
+            display: block;
+            text-align: center;
+            background: rgba(0,0,0,.1);
+        }
+    }
 }

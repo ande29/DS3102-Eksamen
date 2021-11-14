@@ -3,18 +3,6 @@ const cardTemplate = document.createElement("template");
 cardTemplate.innerHTML = `
 
     <style>
-        .card {
-            width: 370px;
-            height: 450px;
-            box-shadow: inset 5px 5px 5px rgba(55, 0, 58, .2),
-                        inset -5px -5px 15px rgba(69, 19, 73, .1),
-                        5px 5px 15px rgba(55, 0, 58, .3), 
-                        -5px -5px 15px rgba(69, 19, 73, .1);
-            border-radius: 15px;
-            margin: 20px auto;
-            padding: 20px;
-            perspective: 1000px;
-        }
         .inside{
             position: relative;
             width: 100%;

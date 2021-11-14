@@ -1,13 +1,80 @@
-card-item{
-    width: 400px;
+// filters
+.content-header{
+    display: none;
+    .content-filters{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        select, input, select option{
+            text-align: center;
+            padding: 5px;
+            width: 80%;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    }
 }
 
+// default page
+.welcome-msg{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.75);
+    
+    h2{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+    p{
+        margin: 10px;
+    }
+    a{
+        width: 200px;
+        border: 1px solid;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        text-decoration: none;
+        color: #37003A;
+        border: 1px solid #37003A;
+
+        &:hover{
+            color: white;
+            background:#37003A;
+            transition: 1s;
+        }
+    }
+}
+
+// theme output
 #content-output{
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(1, auto);
+    column-gap: 10px;
 }
 
+// cards
+.card {
+    width: 320px;
+    height: 450px;
+    box-shadow: inset 5px 5px 5px rgba(55, 0, 58, .2),
+                inset -5px -5px 15px rgba(69, 19, 73, .1),
+                5px 5px 15px rgba(55, 0, 58, .3), 
+                -5px -5px 15px rgba(69, 19, 73, .1);
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+
+// media queries
 @media only screen and (min-width: 576px) {
     #content-output{
         grid-template-columns: repeat(2, auto);
@@ -16,5 +83,12 @@ card-item{
 @media only screen and (min-width: 971px) {
     #content-output{
         grid-template-columns: repeat(3, auto);
+        column-gap: 20px;
+    }
+    .card{
+        width: 320px;
+    }
+    .content-header .content-filters{
+        flex-direction: row;
     }
 }

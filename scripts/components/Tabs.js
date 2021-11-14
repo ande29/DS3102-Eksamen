@@ -3,6 +3,7 @@ import selectOptions from "../filter.js";
 import getTheme from "../quizGenerator.js";
 // variables
 const bannerContainer = document.querySelector(".banner-container");
+const contentHeader = document.querySelector(".content-header");
 const activeWindow = window.document.title;
 
 // Functions
@@ -17,7 +18,8 @@ const toggleClass = (tab, tabs, theme) => {
     
     if(activeWindow === "Home"){
         generateCards(theme);
-        selectOptions(theme);     
+        selectOptions(theme);
+        contentHeader.style.display = "block";   
     } 
     if(activeWindow === "Quiz"){
         getTheme(theme);
