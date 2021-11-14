@@ -27,4 +27,4 @@ const findPlayer = () => {
     })
     console.log( player)
 }
-highScoreBtn.addEventListener("click", findPlayer);
+highScoreBtn.addEventListener("click", displayScore);

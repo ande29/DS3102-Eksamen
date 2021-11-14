@@ -27,7 +27,7 @@ const findPlayer = () => {
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
-
+    findPlayer();
     startQuiz(startButton);
 }
 
@@ -39,7 +39,6 @@ const startQuiz = (e) => {
         modal.style.display = "flex";
         e.disabled = true;
         gameHandler();
-        findPlayer();
     })
 } 
 
