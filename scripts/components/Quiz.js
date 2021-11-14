@@ -65,19 +65,23 @@ quizTemplate.innerHTML = `
         width: 50%;
         height: 40%;
         border-radius: 1rem;
+        margin: 10px;
     }
     .navigation-container{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin: 0.2rem;
         height: 50px;
         align-content: center;
         flex-direction: row;
     }
+    .navigation-container *{
+        text-align: center;
+        width: 33%;
+    }
     .nav-btn{
-        width: 20%;
         border-radius: 0.5rem;
         height: 100%
     }

@@ -56,3 +56,6 @@ submit/ferdig side med knapp.
 display score med beskjed - legges inn i localstorage.
 Scorebord, hente navn og score fra localstorage, legge inn i en LI. 
 
+Navbar:
+
+Bytte icon på quiz tab

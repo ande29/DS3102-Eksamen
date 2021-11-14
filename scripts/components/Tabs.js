@@ -59,6 +59,9 @@ tabsTemplate.innerHTML = `
             padding: 10px 5px;
             color: #999;
         } 
+        #pl-tab{
+            border-right: 1px solid rgba(255,255,255,.5);
+        }
         .tabs:hover{
             background-color: rgba(255, 255, 255, .1);
             color: #fff;
@@ -67,6 +70,7 @@ tabsTemplate.innerHTML = `
         .active-tab{
             color: #eee;
             background-color: rgba(255, 255, 255, .1);
+            border-top: 1px solid rgba(255,255,255,.5);
         }
     </style>
 
