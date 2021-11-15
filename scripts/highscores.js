@@ -1,21 +1,26 @@
 const highscoreTable = document.querySelector(".highscore-output");
 const highScoreBtn = document.querySelector(".highscore-btn");
 const playerHighscores = JSON.parse(localStorage.getItem("users"));
-
+const crown = document.querySelector(".fa-crown");
 
 
 const displayScore = () => {
-    let htmlTxt = ``;
+    let htmlTxt = `<i class="fas fa-crown hidden"></i>`;
 
     playerHighscores.forEach(player => {
             console.log(player.name)
             htmlTxt += `
-            <li class= "list">${player.name} ${player.score}</li>
+            <p>${player.name} ${player.score}</p>
             ` 
         });
-        document.querySelector(".fa-crown").style.visibility = "visible";
+     //   crown.style.visibility = "visible";
         highscoreTable.innerHTML = htmlTxt;
+
 }
 
-highScoreBtn.addEventListener("click", displayScore);
+highScoreBtn.addEventListener("click", () => {
+    highscoreTable.classList.toggle("hidden");
+   // crown.classList.toggle("hidden");
+    displayScore();
+});
 
