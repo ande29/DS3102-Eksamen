@@ -282,11 +282,17 @@ table {
 }
 
 .input-container {
+  text-align: center;
   padding: 1rem;
   border: 1px solid red;
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
-  align-self: auto, auto, flex-end;
+  flex-direction: column;
+}
+.input-container #name-input {
+  margin: 0.2rem;
 }
 
 .user-output {
@@ -348,6 +354,17 @@ table {
   list-style: number;
 }
 
+.box {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+@media only screen and (min-width: 577px) {
+  .input-container {
+    flex-direction: row;
+  }
+}
 .modal {
   position: fixed;
   justify-content: center;

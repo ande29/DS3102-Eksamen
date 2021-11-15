@@ -4,15 +4,6 @@ const selectBtn = document.querySelector("#select-btn");
 const userOutput = document.querySelector(".user-output");
 
 
-/*let adminStorage = () => {
-    let addAdming = [
-    {
-        name: "",
-        gender:"" 
-    },
-    ];
-    localStorage.setItem("users", JSON.stringify(addAdming));      
-}*/
 let userObj = [];
 
 if(localStorage.getItem("users")){

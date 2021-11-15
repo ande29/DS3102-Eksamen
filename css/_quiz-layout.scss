@@ -11,11 +11,18 @@
     font-weight: bold;
 }
 .input-container{
+    text-align: center;
     padding: 1rem;
     border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
-    align-self:  auto, auto, flex-end;
+    flex-direction: column;
+
+    #name-input{
+        margin: 0.2rem;
+    }
 }
 .user-output{
     border: 1px solid red;
@@ -78,4 +85,15 @@
 }
 .hidden{
     //display: none;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+@media only screen and (min-width: 577px) {
+    .input-container{
+    flex-direction: row;
+    }
 }
