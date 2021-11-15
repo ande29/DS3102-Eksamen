@@ -33,8 +33,7 @@
         </nav>
     </header>
 
-    <main>
-        
+    <main>    
         <section class="banner-container">
             <div class="banner-overlay">
                 <h1 class="title">Test din kunnskap</h1>
@@ -46,34 +45,29 @@
         </section>
         
         <content-tabs></content-tabs>
+    
+        <section class="quiz">
+                <section class="user-section">  
+                    <h2 class="user-header">Fyll inn informasjon</h2>
+                    <article class="input-container">
+                        <label for="playername">Brukernavn</label>
+                        <input type="text" name="playername" id="name-input" placeholder="skriv inn navn..">
+                    </article>  
+                    <article class="user-output">
+                    </article>  
+                </section>
 
-        
-            <section class="user-section">  
-                <h2 class="user-header">Fyll inn informasjon</h2>
-                <article class="input-container">
-                    <select name="gender-select" class="select-cursor" id="gender-select">
-                        <option value="Kvinne">Kvinne</option>
-                        <option value="Mann">Mann</option>
-                        <option value="Annet">Annet</option>
-                    </select>
-                    <input type="text" id="name-input" placeholder="skriv inn navn..">
-                    <input type="button" class="select-cursor" id="select-btn" value="Bekreft">
-                </article>  
-                <article class="user-output">
-                </article>  
-            </section>
-            
-            <section class="quiz">
                 <article class="quiz__box">
                     <h3 class="quiz__header">Test dine ferdigheter</h3>
                     <button class="quiz__start-btn">Start Quiz</button>
                     <button class="highscore-btn">Highscores</button>
                 </article>
-                <article class="highscore-container hidden">
+                <article class="highscore-container">
                     <i class="fas fa-crown"></i>
                     <div class="highscore-output hidden"></div>
                 </article>
             </section>
+
             <section class="modal">
                 <!--<article class="modal-content">-->
                 <!--<button class="close-btn"><i class="fas fa-times"></i></button>-->
@@ -97,6 +91,7 @@
     </script>
     <script src="scripts/components/Card.js"></script>
     <script src="scripts/components/Banner.js"></script>
+    
     <script defer type="module" src="scripts/components/Tabs.js"></script>
 </body>
 </html>

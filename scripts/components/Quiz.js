@@ -90,11 +90,6 @@ quizTemplate.innerHTML = `
         text-align: center;
         font-size: 1.2rem;
     }
-    .result-header{
-    }
-    .result-msg{
-
-    }
     .exit-btn{
         width: 50%;
         bottom: 0;

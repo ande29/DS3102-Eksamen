@@ -1,4 +1,5 @@
 import {athleteQustions, premierLeagueQustions} from './questionsData.js';
+import confettiLoop from './animations.js';
 
 const startButton = document.querySelector(".quiz__start-btn");
 const modal = document.querySelector(".modal");
@@ -9,25 +10,26 @@ let quizContainer, resultContainer;
 let  score, questionIndex;
 let questionArray, questionArrayColor, quizLength;
 let selectedOption, correctAnswer;
-let player;
-console.log(player)
+let player, playerScore;
+
 
 
 // functions
 const findPlayer = () => {
     let playerNameArray = JSON.parse(localStorage.getItem("users"));
     let playerName = [...playerNameArray.slice(-1)]
+    console.log(playerNameArray, playerName);
 
     playerName.forEach(name => {
-        player = name.name
-        console.log(player)
+        player = name.name;
+        name.score = score;
+        console.log(player, playerScore);
     })
 }
 // get quiz theme
 const getTheme = (theme) => {
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
-    findPlayer();
     startQuiz(startButton);
 }
 
@@ -38,6 +40,7 @@ const startQuiz = (e) => {
         questionIndex = 0;
         modal.style.display = "flex";
         e.disabled = true;
+        findPlayer();
         gameHandler();
     })
 } 
@@ -72,6 +75,7 @@ const selectAnswer = (btns) => {
 const checkAnswer = (answer, correct) => {
     if(answer === correct){
         score++;
+        playerScore++;
         console.log("correct! score: " + score)
     } else {
         console.log("wrong! score: " + score)
@@ -88,6 +92,7 @@ const nextQuestion = (btn) => {
             checkAnswer(selectedOption, correctAnswer)
             gameHandler();
             console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
+            console.log("player: ", player, "score: ", playerScore)
         } else if(questionIndex+1 > quizLength){
             checkAnswer(selectedOption, correctAnswer)
             startButton.disabled = false;
@@ -100,10 +105,11 @@ const nextQuestion = (btn) => {
 // end quiz / submit quiz
 const displayResult = () => {
     displayQuiz(questionArray, questionArrayColor);
+    const modalContent = document.querySelector(".modal-content");
     quizContainer.style.display = "none";
     resultContainer.style.display = "block";
+    confettiLoop(modalContent);
     closeQuiz(document.querySelector('.exit-btn'));
-    
 }
 
 

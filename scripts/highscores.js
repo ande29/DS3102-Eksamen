@@ -1,17 +1,16 @@
 const highscoreTable = document.querySelector(".highscore-output");
 const highScoreBtn = document.querySelector(".highscore-btn");
+const playerHighscores = JSON.parse(localStorage.getItem("users"));
 
-const highscores = JSON.parse(localStorage.getItem("users"));
-console.log(highscores)
 
 
 const displayScore = () => {
     let htmlTxt = ``;
 
-        highscores.forEach(name => {
-            console.log(name.name)
+    playerHighscores.forEach(player => {
+            console.log(player.name)
             htmlTxt += `
-            <li class= "list">${name.name}</li>
+            <li class= "list">${player.name} ${player.score}</li>
             ` 
         });
         document.querySelector(".fa-crown").style.visibility = "visible";

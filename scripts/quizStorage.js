@@ -1,6 +1,5 @@
-const selectedGender = document.querySelector("#gender-select");
 const nameInput = document.querySelector("#name-input");
-const selectBtn = document.querySelector("#select-btn");
+const selectBtn = document.querySelector(".quiz__start-btn");
 const userOutput = document.querySelector(".user-output");
 
 
@@ -21,9 +20,9 @@ let storeUser = () => {
 
 const getUserInfo = () => {
     if(nameInput.value.length > 0){
-        userObj.push({name:nameInput.value, gender:selectedGender.value});
+        userObj.push({name: nameInput.value, score: 0});
         localStorage.setItem("users", JSON.stringify(userObj));
-        message = `<p>${nameInput.value} og du er en ${selectedGender.value}</p>`;
+        message = `<p>lykke til ${nameInput.value}</p>`;
     }else{
         message = `<p style='color: red'> please select gender and type in name`;
     }
