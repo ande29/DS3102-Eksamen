@@ -10,17 +10,15 @@ const displayScore = () => {
     playerHighscores.sort((a,b) => b.score - a.score);
     playerHighscores.forEach(player => {
         htmlTxt += `
-        <p>${player.name} ${player.score}</p>
+        <p>${player.name} - ${player.score} pts</p>
         ` 
         console.log(player)
     });
-    //   crown.style.visibility = "visible";
         highscoreTable.innerHTML = htmlTxt;
 
 }
 highScoreBtn.addEventListener("click", () => {
     highscoreTable.classList.toggle("hidden");
-   // crown.classList.toggle("hidden");
     displayScore();
 });
 

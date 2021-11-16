@@ -20,7 +20,7 @@ let storeUser = () => {
 
 const getUserInfo = () => {
     if(nameInput.value.length > 0){
-        userObj.push({name: nameInput.value, score: 0});
+        userObj.push({name: nameInput.value});
         localStorage.setItem("users", JSON.stringify(userObj));
         message = `<p>lykke til ${nameInput.value}</p>`;
     }else{

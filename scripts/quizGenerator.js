@@ -54,6 +54,7 @@ const closeQuiz = (btn) => {
     btn.addEventListener("click", () => {
         modal.style.display = "none";
         startButton.disabled = false;
+        location.reload();
     })
 }
 
@@ -165,7 +166,4 @@ const gameHandler = () => {
     closeQuiz(document.querySelector(".close-btn"));
 }
 
-const addScore = () => {
-
-}
 export default getTheme;
