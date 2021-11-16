@@ -1,18 +1,15 @@
 import PremierLeagueModule from "./modules/PremierLeagueModule.js"
 import athletesInformation from "./athletesInformation.js";
 
-// Html elements
 const contentOutput = document.querySelector("#content-output");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 const selectInput = document.querySelector("#filter-select");
 const searchBar = document.querySelector("#search-bar");
 
-// arrays
 const premierLeague = PremierLeagueModule.getAllClubs();
 const athletes = athletesInformation.athletesArray;
 
-// Searchbar function
 const searchFunction = (cards, color, theme) => {
     searchBar.addEventListener("keyup", (e) => {
         const searchInput = e.target.value.toLowerCase();
@@ -24,7 +21,7 @@ const searchFunction = (cards, color, theme) => {
             });
             displayCards(searchResult, color, theme);
             flipCards();
-    });
+    })
 }
 
 // Filter selection
@@ -33,33 +30,27 @@ const filterSelection = (cards, color, theme) => {
         let inputValue = selectInput.value;
         let output;
 
-        // vunnet ligaen
         if(inputValue === "Vunnet Premier League"){
             output = cards.filter(card => {
                 card = (card.titles > 0);
                 return card;
             })
         } 
-        // ikke vunnet ligaen
         else if(inputValue === "Ikke vunnet Premier League"){
             output = cards.filter(card => {
                 card = (card.titles < 1);
                 return card;
             })
         } 
-        // A-Z
         else if(inputValue === "Navn (A-Z)"){
             output = cards.sort((a,b) => a.name > b.name ? 1 : -1)
         }
-        // Z-A
         else if(inputValue === "Navn (Z-A)"){
             output = cards.sort((a,b) => a.name < b.name ? 1 : -1)
         }
-        // Lav til høy
         else if(inputValue === "Alder (lav-høy)"){
             output = cards.sort((a,b) => a.age > b.age ? 1 : -1)
         }
-        // høy til lav
         else if(inputValue === "Alder (høy-lav)"){
             output = cards.sort((a,b) => a.age < b.age ? 1 : -1)
         }
@@ -69,7 +60,6 @@ const filterSelection = (cards, color, theme) => {
     })
 }
 
-// Display cards
 const displayCards = (cards, color, theme) => {
     const htmlTxt = cards.map((card) => {
         let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "har aldri vunnet ligaen";
@@ -93,7 +83,7 @@ const displayCards = (cards, color, theme) => {
     
     contentOutput.innerHTML = htmlTxt;
 }
-// flip cards
+
 const flipCards = () => {
     let cards = document.querySelectorAll(".inside");
 
@@ -103,7 +93,7 @@ const flipCards = () => {
         })
     })
 }
-// load cards
+
 const generateCards = (theme) => {
     switch(theme){
         case "premier-league":
