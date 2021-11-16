@@ -189,16 +189,18 @@ table {
 }
 
 .input-container {
-  text-align: center;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 .input-container #name-input {
-  margin: 0.2rem;
+  padding: 5px;
+  text-align: center;
+  margin: 10px;
 }
 
 .quiz {
