@@ -2,11 +2,13 @@ import {athleteQustions, premierLeagueQustions} from './questionsData.js';
 import confettiLoop from './confettiAnimation.js';
 import getUserInfo from './quizStorage.js';
 
-const startButton = document.querySelector(".quiz__start-btn");
 const modal = document.querySelector(".modal");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 const userOutput = document.querySelector(".user-output");
+const startButton = document.querySelector(".quiz__start-btn");
+const activeWindow = window.document.title;
+
 
 let quizContainer, resultContainer;
 let score, questionIndex;
@@ -42,6 +44,7 @@ const getTheme = (theme) => {
     questionArrayColor = theme === "premier-league" ? primary : secondary;
 }
 
+// validate
 const validateInput = (theme) => {
    let nameInput = document.querySelector("#name-input");
     let message = ``;
@@ -59,9 +62,13 @@ const validateInput = (theme) => {
     console.log(nameInput.value)
     userOutput.innerHTML = message;
 }
-startButton.addEventListener("click", () => {
-    validateInput(quizTheme);
-});
+
+if(activeWindow === "Quiz"){
+    startButton.addEventListener('click', () => {
+        validateInput(quizTheme)
+    })
+}
+
 //start quiz
 const startQuiz = (e) => {
         score = 0;

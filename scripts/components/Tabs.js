@@ -1,6 +1,7 @@
 import generateCards from "../card-generator.js";
 import selectOptions from "../filter.js";
 import getTheme from "../quizGenerator.js";
+
 // variables
 const bannerContainer = document.querySelector(".banner-container");
 const contentHeader = document.querySelector(".content-header");
