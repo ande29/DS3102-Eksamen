@@ -2,9 +2,6 @@ const highscoreTable = document.querySelector(".highscore-output");
 const highScoreBtn = document.querySelector(".highscore-btn");
 const playerHighscores = JSON.parse(localStorage.getItem("scores"));
 const crown = document.querySelector(".fa-crown");
-console.log(playerHighscores);
-
-
 
 const displayScore = () => {
     let htmlTxt = `<i class="fas fa-crown hidden"></i>`;
@@ -12,9 +9,7 @@ const displayScore = () => {
     playerHighscores.sort((a,b) => b.score - a.score);
     playerHighscores.forEach(player => {
         htmlTxt += `
-            <h4>${player.name} - ${player.score} pts</h4>
-            ` 
-      console.log(player)
+            <h4>${player.name} - ${player.score} pts</h4>` 
 })
         highscoreTable.innerHTML = htmlTxt;
 }
