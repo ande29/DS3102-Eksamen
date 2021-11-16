@@ -49,13 +49,11 @@ eventlistneres på alle knappene (svaralt, reset og next, og close);
 incrementer på score. --- check
 next button funksjons --- check
 
-reset funksjon ved closing av quiz og refreshe siden
-poeng på summeres og legges i localstorage
-reversere array listen på highscores. Nyeste brukere øverst
+reset funksjon ved closing av quiz og refreshe siden --- check
 submit/ferdig side med knapp. --- check
-display score med beskjed - legges inn i localstorage.
+display score med beskjed - legges inn i localstorage. --- check
 Animasjon/bilde ved ferdig quiz --- check
-Scorebord, hente navn og score fra localstorage, legge inn i en LI. 
+Scorebord, hente navn og score fra localstorage, legge inn i en LI. --- check
 Skrive rapport
 flere animasjoner
 
