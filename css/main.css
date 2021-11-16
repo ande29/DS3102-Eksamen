@@ -298,46 +298,6 @@ table {
   z-index: 2;
 }
 
-/*
-.modal-content{   
-    box-shadow:  10px 8px 5px rgba(55, 0, 58, .2);
-    color: white;
-    width: 50%;
-    height: auto;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 1rem;
-}
-.close-btn{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: rgb(34, 33, 169);
-    color: white;
-}
-.question-content{
-    padding: 1rem;
-}
-.question-header{
-    font-weight: bold;
-    text-align: center;
-    margin: 1rem;
-    border-bottom: 1px solid white;
-}
-.quiz-btn{
-    width: 90%;
-    padding: 0.5rem;
-    //background-color: rgb(34, 33, 169);
-    border-radius: 1rem;
-}
-.quiz-btn:hover{
-    background-color: green;
-    transition: 1s;
-}
-*/
 .open-modal {
   opacity: 1;
   transform: scale(1);
