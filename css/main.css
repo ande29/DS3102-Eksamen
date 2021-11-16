@@ -311,6 +311,7 @@ table {
 
 .content-header {
   display: none;
+  position: relative;
 }
 .content-header .content-filters {
   display: flex;
@@ -325,7 +326,32 @@ table {
   margin: 10px;
 }
 
+.tooltip {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: white;
+}
+.tooltip .tooltip-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem;
+  color: #37003A;
+}
+.tooltip .tooltip-text {
+  padding: 20px;
+  display: none;
+}
+.tooltip:hover .tooltip-text {
+  background: #37003A;
+  margin-right: 50px;
+  display: block;
+  color: white;
+}
+
 .info-container {
+  position: relative;
   width: 100%;
   max-width: 400px;
   text-align: center;
