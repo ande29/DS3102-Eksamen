@@ -19,7 +19,6 @@ const confettiLoop = (container) => {
         confetti.forEach(item => {
             animateConfetti(item, height)
         })
-        console.log(height, width)
     }
 
 const animateConfetti = (el, h) => {
@@ -45,7 +44,6 @@ const animateConfetti = (el, h) => {
         ease: Sine.easeInOut})
 }
 
-// randomizers
 const randomizeMax = (max) => {
     return Math.random()*max;
 }
