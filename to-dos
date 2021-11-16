@@ -14,7 +14,7 @@ Quizsiden:
 Egen banner til quiz -- check
 -> input til navn og kjønn (Lagres i localstorage) -- check
 ptag til velkommen bruker -- check
-Button til å velge quiz 
+Button til å velge quiz --- check
 (Pop up) side når quiz er valgt. Med Banner, navn, riktig spm og antall spm --- check
 animasjoner 
 
@@ -49,13 +49,15 @@ eventlistneres på alle knappene (svaralt, reset og next, og close);
 incrementer på score. --- check
 next button funksjons --- check
 
-reset funksjon ved closing av quiz.  --- check
+reset funksjon ved closing av quiz og refreshe siden
 poeng på summeres og legges i localstorage
-sorteres etter highest score. reversere array listen på highscores. Nyeste brukere øverst
-submit/ferdig side med knapp. 
+reversere array listen på highscores. Nyeste brukere øverst
+submit/ferdig side med knapp. --- check
 display score med beskjed - legges inn i localstorage.
-Animasjon/bilde ved ferdig quiz
+Animasjon/bilde ved ferdig quiz --- check
 Scorebord, hente navn og score fra localstorage, legge inn i en LI. 
+Skrive rapport
+flere animasjoner
 
 
 
