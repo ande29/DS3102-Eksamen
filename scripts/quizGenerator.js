@@ -116,6 +116,7 @@ const displayResult = () => {
 const displayQuiz = (data, color) => {    
     let htmlTxt = "";
     let resultMsg = score > 3 ? "Godt jobbet!" : "Du kan bedre...";
+    let icon = score > 3 ? "fa-medal" : "fa-award";
     quizLength = data.length;
     let playerName = player
 
@@ -139,6 +140,7 @@ const displayQuiz = (data, color) => {
         backgroundModal = "${color}"
         resultHeader = "${resultMsg}"
         resultMsg = "Du fikk ${score} poeng av ${quizLength} mulige"
+        icon = "${icon}"
         ></quiz-modal>
         `;
     }

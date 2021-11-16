@@ -111,6 +111,16 @@ quizTemplate.innerHTML = `
         background: rgba(255, 255, 255, .1);
         transition: .5s;
     }
+    .icon-container{
+        height: 200px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon{
+        font-size: 6rem;
+    }
     </style>
 
         <article class="modal-content">
@@ -138,6 +148,9 @@ quizTemplate.innerHTML = `
             <section class="result-content">
                 <h2 class="result-header"></h2>
                 <p class="result-msg"></p>
+                <div class="icon-container">
+                    <i class="icon fas "></i>
+                </div>
                 <button class="exit-btn">Tilbake</button>
             </section>
 
@@ -177,6 +190,9 @@ class Quiz extends HTMLElement {
         
         const resultMsg = this.getAttribute("resultMsg");
         this.querySelector(".result-msg").innerHTML = `${resultMsg}`;
+        
+        const icon = this.getAttribute("icon");
+        this.querySelector(".icon").classList.add(`${icon}`);
     }
 };
 
