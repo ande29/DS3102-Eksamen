@@ -179,12 +179,6 @@ table {
   text-align: center;
 }
 
-.border-box {
-  margin: 20px auto;
-  border-radius: 5px;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.75);
-}
-
 .select-cursor {
   cursor: pointer;
 }
@@ -197,7 +191,6 @@ table {
 .input-container {
   text-align: center;
   padding: 1rem;
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -208,14 +201,13 @@ table {
   margin: 0.2rem;
 }
 
-.user-output {
-  border: 1px solid red;
-}
-
 .quiz {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.75);
 }
 .quiz__header {
   padding: 1rem;
@@ -225,7 +217,6 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
   margin: 0.5rem;
 }
 .quiz__btn {
@@ -273,7 +264,6 @@ table {
 .box {
   height: 50px;
   width: 50px;
-  background-color: red;
 }
 
 @media only screen and (min-width: 577px) {
