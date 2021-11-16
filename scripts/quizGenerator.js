@@ -1,5 +1,5 @@
 import {athleteQustions, premierLeagueQustions} from './questionsData.js';
-import confettiLoop from './animations.js';
+import confettiLoop from './confettiAnimation.js';
 
 const startButton = document.querySelector(".quiz__start-btn");
 const modal = document.querySelector(".modal");

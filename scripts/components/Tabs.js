@@ -24,8 +24,8 @@ const toggleClass = (tab, tabs, theme) => {
     if(activeWindow === "Quiz"){
         getTheme(theme);
     }
-
     generateBanner(theme);
+    
 }
 
 const generateBanner = (theme) => {

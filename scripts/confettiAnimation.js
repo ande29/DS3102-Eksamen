@@ -35,11 +35,11 @@ const animateConfetti = (el, h) => {
         yoyo: true,
         ease: Sine.easeInOut })
      TweenMax.to(el, randomizeMax(5)+1,{
-         scaleX: 0.2,
+         scaleX: .2,
          rotation: randomizeMax(360), repeat:-1,
          yoyo: true,
          ease: Sine.easeInOut })
-    TweenMax.to(el, randomizeMax(1)+0.5,{
+    TweenMax.to(el, randomizeMax(1)+.5,{
         opacity: 0, 
         repeat: -1,
         yoyo: true, 
