@@ -1,6 +1,6 @@
 const highscoreTable = document.querySelector(".highscore-output");
 const highScoreBtn = document.querySelector(".highscore-btn");
-const playerHighscores = JSON.parse(localStorage.getItem("users"));
+const playerHighscores = JSON.parse(localStorage.getItem("scores"));
 const crown = document.querySelector(".fa-crown");
 
 
@@ -12,6 +12,7 @@ const displayScore = () => {
             htmlTxt += `
             <p>${player.name} ${player.score}</p>
             ` 
+            console.log(player)
         });
      //   crown.style.visibility = "visible";
         highscoreTable.innerHTML = htmlTxt;

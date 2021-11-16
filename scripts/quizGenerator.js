@@ -10,9 +10,14 @@ let quizContainer, resultContainer;
 let  score, questionIndex;
 let questionArray, questionArrayColor, quizLength;
 let selectedOption, correctAnswer;
-let player, playerScore;
+let player;
+let playerScore = [];
 
-
+if(localStorage.getItem("scores")){
+    playerScore = JSON.parse(localStorage.getItem("scores"))
+}else{
+        playerScore;
+}
 
 // functions
 const findPlayer = () => {
@@ -75,7 +80,7 @@ const selectAnswer = (btns) => {
 const checkAnswer = (answer, correct) => {
     if(answer === correct){
         score++;
-        playerScore++;
+      //  playerScore++;
         console.log("correct! score: " + score)
     } else {
         console.log("wrong! score: " + score)
@@ -143,6 +148,8 @@ const displayQuiz = (data, color) => {
         icon = "${icon}"
         ></quiz-modal>
         `;
+        playerScore.push({name:playerName, score:score});
+        localStorage.setItem("scores", JSON.stringify(playerScore));
     }
     
     modal.innerHTML = htmlTxt;
