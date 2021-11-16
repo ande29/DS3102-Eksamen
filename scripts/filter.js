@@ -25,6 +25,5 @@ const selectOptions = (theme) => {
             selectFilter.innerHTML = htmlTxt;
 }
 
-
 export default selectOptions
 

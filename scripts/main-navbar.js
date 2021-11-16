@@ -11,8 +11,7 @@ const toggleMenu = () => {
     } else {
         navbarContainer.style.height = "0%";   
     }
-
-}
+};
 
 menuBars.addEventListener("click", toggleMenu);
 exitMenuBtn.addEventListener("click", toggleMenu);

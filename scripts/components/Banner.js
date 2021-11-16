@@ -12,7 +12,6 @@ bannerTemplate.innerHTML = `
             background: #37003A; 
             background: linear-gradient(to left, #333399, #37003A);
         }
-        
     </style>
 
         <img class="banner-img">

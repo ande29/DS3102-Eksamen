@@ -8,17 +8,16 @@ console.log(playerHighscores);
 
 const displayScore = () => {
     let htmlTxt = `<i class="fas fa-crown hidden"></i>`;
+
     playerHighscores.sort((a,b) => b.score - a.score);
     playerHighscores.forEach(player => {
         htmlTxt += `
-        <h4>${player.name} - ${player.score} pts</h4>
-        ` 
+            <h4>${player.name} - ${player.score} pts</h4>
+            ` 
       console.log(player)
 })
         highscoreTable.innerHTML = htmlTxt;
-
 }
-    let tween;
 
 highScoreBtn.addEventListener("click", () => {
     highscoreTable.classList.toggle("hidden");

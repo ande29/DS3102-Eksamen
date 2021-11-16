@@ -22,7 +22,6 @@ const confettiLoop = (container) => {
         console.log(height, width)
     }
 
- 
 const animateConfetti = (el, h) => {
     TweenMax.to(el, randomizeMax(5)+4,{
         y: h,
@@ -48,11 +47,10 @@ const animateConfetti = (el, h) => {
 
 // randomizers
 const randomizeMax = (max) => {
-return Math.random()*max;
+    return Math.random()*max;
 }
 const randomize = (min, max) => {
-return min + Math.floor( Math.random() * (max - min));
+    return min + Math.floor( Math.random() * (max - min));
 }
-
 
 export default confettiLoop;

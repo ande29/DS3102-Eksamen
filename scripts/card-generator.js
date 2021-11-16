@@ -2,22 +2,17 @@ import PremierLeagueModule from "./modules/PremierLeagueModule.js"
 import athletesInformation from "./athletesInformation.js";
 
 // Html elements
-
 const contentOutput = document.querySelector("#content-output");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
 const selectInput = document.querySelector("#filter-select");
 const searchBar = document.querySelector("#search-bar");
 
-
 // arrays
-
 const premierLeague = PremierLeagueModule.getAllClubs();
 const athletes = athletesInformation.athletesArray;
 
-
 // Searchbar function
-
 const searchFunction = (cards, color, theme) => {
     searchBar.addEventListener("keyup", (e) => {
         const searchInput = e.target.value.toLowerCase();
@@ -74,11 +69,7 @@ const filterSelection = (cards, color, theme) => {
     })
 }
 
-
-
-
 // Display cards
-
 const displayCards = (cards, color, theme) => {
     const htmlTxt = cards.map((card) => {
         let hasWon = card.titles > 0 ? `har vunnet ligaen ${card.titles} gang(er)` : "har aldri vunnet ligaen";
@@ -88,8 +79,6 @@ const displayCards = (cards, color, theme) => {
         ${card.name} spiller sine hjemmekamper på ærverdige ${card.stadium} og ${hasWon}.
         Deres nåværende manager er ${card.manager}.`;
 
-
-        
         return `
         <card-item
         name="${card.name}"
@@ -104,9 +93,7 @@ const displayCards = (cards, color, theme) => {
     
     contentOutput.innerHTML = htmlTxt;
 }
-
 // flip cards
-
 const flipCards = () => {
     let cards = document.querySelectorAll(".inside");
 
@@ -116,9 +103,7 @@ const flipCards = () => {
         })
     })
 }
-
 // load cards
-
 const generateCards = (theme) => {
     switch(theme){
         case "premier-league":
@@ -138,6 +123,5 @@ const generateCards = (theme) => {
             break;
         }
     }
-
 
 export default generateCards;
