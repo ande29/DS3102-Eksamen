@@ -8,7 +8,7 @@ Flip Cards på idrettsstjerner --- check
 Banner -- check
 Navbar  -- check
 filter & inputfelt -- check
-animasjoner // KEyframes eller Gsap 
+animasjoner // KEyframes eller Gsap --- check
 
 Quizsiden:
 Egen banner til quiz -- check
@@ -28,7 +28,7 @@ reduce  // Legge sammen poeng i quiz
 automatisk funksjon -- check 
 if -- check 
 for each -- check 
-for-løkke 
+for-løkke --- check
 
 LocalStorage:
 JSON -- check
@@ -38,14 +38,13 @@ Modul  --- check
 Class   --- check
 Komponenter --- check
 Shadow Komponenter
-Gsap
 dry -- check 
 
 QUIZSIDEN:
 Lage en funksjon som starter valg quiz, random rekkefølge -- kjører Komponentet og genrer HMTL. --- check
 Start button basert på tema --- check
 start button åpner Quizsiden. --- check
-eventlistneres på alle knappene (svaralt, reset og next, og close);
+eventlistneres på alle knappene (svaralt, reset og next, og close); --- check
 incrementer på score. --- check
 next button funksjons --- check
 
@@ -55,10 +54,10 @@ display score med beskjed - legges inn i localstorage. --- check
 Animasjon/bilde ved ferdig quiz --- check
 Scorebord, hente navn og score fra localstorage, legge inn i en LI. --- check
 Skrive rapport
-flere animasjoner
+flere animasjoner --- check
 
 
 
 Navbar:
 
-Bytte icon på quiz tab
+Bytte icon på quiz tab --- check
