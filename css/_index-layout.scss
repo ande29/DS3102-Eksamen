@@ -1,6 +1,6 @@
-// filters
 .content-header{
     display: none;
+    
     .content-filters{
         display: flex;
         flex-direction: column;
@@ -16,7 +16,6 @@
     }
 }
 
-// default page
 .welcome-msg{
     width: 100%;
     max-width: 400px;
@@ -51,7 +50,6 @@
     }
 }
 
-// theme output
 #content-output{
     display: grid;
     justify-content: center;
@@ -59,7 +57,6 @@
     column-gap: 10px;
 }
 
-// cards
 .card {
     width: 320px;
     height: 500px;
@@ -74,7 +71,6 @@
 }
 
 
-// media queries
 @media only screen and (min-width: 577px) {
     #content-output{
         grid-template-columns: repeat(2, auto);

@@ -14,7 +14,7 @@ bannerTemplate.innerHTML = `
         }
     </style>
 
-        <img class="banner-img">
+    <img class="banner-img">
 `;
 
 
