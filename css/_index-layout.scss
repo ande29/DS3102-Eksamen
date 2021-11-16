@@ -86,5 +86,10 @@
     }
     .content-header .content-filters{
         flex-direction: row;
+        justify-content: center;
+
+    }
+    #filter-select, #search-bar{
+        width: 300px;
     }
 }
