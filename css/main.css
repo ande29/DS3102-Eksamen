@@ -471,7 +471,7 @@ table {
   margin: 10px;
 }
 
-.direct-btn {
+.btn {
   width: 80%;
   border: 1px solid;
   padding: 10px 20px;
@@ -482,7 +482,7 @@ table {
   color: #37003A;
   border: 1px solid #37003A;
 }
-.direct-btn:hover {
+.btn:hover {
   color: white;
   background: #37003A;
   transition: 1s;
