@@ -354,6 +354,10 @@ table {
   list-style: number;
 }
 
+.hidden {
+  display: none;
+}
+
 .box {
   height: 50px;
   width: 50px;
@@ -467,8 +471,9 @@ table {
 .welcome-msg p {
   margin: 10px;
 }
-.welcome-msg a {
-  width: 200px;
+
+.direct-btn {
+  width: 80%;
   border: 1px solid;
   padding: 10px 20px;
   display: block;
@@ -478,7 +483,7 @@ table {
   color: #37003A;
   border: 1px solid #37003A;
 }
-.welcome-msg a:hover {
+.direct-btn:hover {
   color: white;
   background: #37003A;
   transition: 1s;
@@ -494,7 +499,7 @@ table {
 
 .card {
   width: 320px;
-  height: 450px;
+  height: 500px;
   box-shadow: inset 5px 5px 5px rgba(55, 0, 58, 0.2), inset -5px -5px 15px rgba(69, 19, 73, 0.1), 5px 5px 15px rgba(55, 0, 58, 0.3), -5px -5px 15px rgba(69, 19, 73, 0.1);
   border-radius: 15px;
   margin: 20px auto;

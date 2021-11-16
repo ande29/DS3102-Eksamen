@@ -35,6 +35,10 @@ cardTemplate.innerHTML = `
             height: 100px;
             font-size: 1.5rem;
         }
+        .inside__front .header h2{
+            width: 100%;
+            text-align: center;
+        }
         .inside__front .content{
             height: 220px;
         }

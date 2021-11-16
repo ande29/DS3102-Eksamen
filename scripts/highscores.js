@@ -8,7 +8,7 @@ const displayScore = () => {
     let htmlTxt = ``;
 
     playerHighscores.forEach(player => {
-            console.log(player.name)
+            
             htmlTxt += `
             <li class= "list">${player.name} ${player.score}</li>
             ` 

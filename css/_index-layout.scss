@@ -32,22 +32,22 @@
     p{
         margin: 10px;
     }
-    a{
-        width: 200px;
-        border: 1px solid;
-        padding: 10px 20px;
-        display: block;
-        text-align: center;
-        margin: 10px auto;
-        text-decoration: none;
-        color: #37003A;
-        border: 1px solid #37003A;
+}
 
-        &:hover{
-            color: white;
-            background:#37003A;
-            transition: 1s;
-        }
+.direct-btn{
+    width: 80%;
+    border: 1px solid;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    text-decoration: none;
+    color: #37003A;
+    border: 1px solid #37003A;
+    &:hover{
+        color: white;
+        background:#37003A;
+        transition: 1s;
     }
 }
 
@@ -62,7 +62,7 @@
 // cards
 .card {
     width: 320px;
-    height: 450px;
+    height: 500px;
     box-shadow: inset 5px 5px 5px rgba(55, 0, 58, .2),
                 inset -5px -5px 15px rgba(69, 19, 73, .1),
                 5px 5px 15px rgba(55, 0, 58, .3), 

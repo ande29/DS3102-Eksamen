@@ -105,10 +105,9 @@ const nextQuestion = (btn) => {
 // end quiz / submit quiz
 const displayResult = () => {
     displayQuiz(questionArray, questionArrayColor);
-    const modalContent = document.querySelector(".modal-content");
     quizContainer.style.display = "none";
     resultContainer.style.display = "block";
-    confettiLoop(modalContent);
+    confettiLoop(document.querySelector(".modal-content"));
     closeQuiz(document.querySelector('.exit-btn'));
 }
 
