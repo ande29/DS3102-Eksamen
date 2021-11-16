@@ -1,6 +1,8 @@
+import getTheme from './quizGenerator.js';
+
 const nameInput = document.querySelector("#name-input");
 const selectBtn = document.querySelector(".quiz__start-btn");
-const userOutput = document.querySelector(".user-output");
+
 
 
 let userObj = [];
@@ -11,22 +13,15 @@ if(localStorage.getItem("users")){
         userObj;
 }
 
-let storeUser = () => {
+/*let storeUser = () => {
     getUserInfo;
 
     let users = JSON.parse(localStorage.getItem("users"));
-
-}
+}*/
 
 const getUserInfo = () => {
-    if(nameInput.value.length > 0){
         userObj.push({name: nameInput.value});
         localStorage.setItem("users", JSON.stringify(userObj));
-        message = `<p>lykke til ${nameInput.value}</p>`;
-    }else{
-        message = `<p style='color: red'> please select gender and type in name`;
-    }
-    userOutput.innerHTML = message;
     console.log(userObj);
 }
 
@@ -47,4 +42,6 @@ const getUserInfo = () => {
     }
     userOutput.innerHTML = message;
 }   */
-selectBtn.addEventListener("click", getUserInfo);
+//selectBtn.addEventListener("click", getUserInfo);
+
+export default getUserInfo;

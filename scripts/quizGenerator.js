@@ -1,14 +1,16 @@
 import {athleteQustions, premierLeagueQustions} from './questionsData.js';
 import confettiLoop from './confettiAnimation.js';
+import getUserInfo from './quizStorage.js';
 
 const startButton = document.querySelector(".quiz__start-btn");
 const modal = document.querySelector(".modal");
 const primary = "linear-gradient(to bottom, #333399, #37003A);";
 const secondary = "linear-gradient(to bottom, #4286f4, #373B44);";
+const userOutput = document.querySelector(".user-output");
 
 let quizContainer, resultContainer;
-let  score, questionIndex;
-let questionArray, questionArrayColor, quizLength;
+let score, questionIndex;
+let questionArray, questionArrayColor, quizLength, quizTheme;
 let selectedOption, correctAnswer;
 let player;
 let playerScore = [];
@@ -16,7 +18,7 @@ let playerScore = [];
 if(localStorage.getItem("scores")){
     playerScore = JSON.parse(localStorage.getItem("scores"))
 }else{
-        playerScore;
+    playerScore;
 }
 
 // functions
@@ -31,23 +33,43 @@ const findPlayer = () => {
         console.log(player, playerScore);
     })
 }
+
+
 // get quiz theme
 const getTheme = (theme) => {
+    quizTheme = theme;
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
-    startQuiz(startButton);
 }
 
+const validateInput = (theme) => {
+   let nameInput = document.querySelector("#name-input");
+    let message = ``;
+    if(nameInput.value.length > 0 && theme){
+        message = `<p>Hei</p>`;
+        getUserInfo();
+        startQuiz(startButton)
+    }else if(nameInput.value.length < 1 && !theme){
+        message = `<p>Skriv inn brukernavn og velg tema</p>`
+    }else if(nameInput.value.length < 1){
+        message = `<p>Skriv inn brukernavn</p>`
+    }else if(!theme){
+        message = `Velg tema`
+    }
+    console.log(nameInput.value)
+    userOutput.innerHTML = message;
+}
+startButton.addEventListener("click", () => {
+    validateInput(quizTheme);
+});
 //start quiz
 const startQuiz = (e) => {
-    e.addEventListener('click', () => {
         score = 0;
         questionIndex = 0;
         modal.style.display = "flex";
         e.disabled = true;
         findPlayer();
         gameHandler();
-    })
 } 
 
 const closeQuiz = (btn) => {
