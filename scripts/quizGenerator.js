@@ -23,28 +23,22 @@ if(localStorage.getItem("scores")){
     playerScore;
 }
 
-// functions
 const findPlayer = () => {
     let playerNameArray = JSON.parse(localStorage.getItem("users"));
     let playerName = [...playerNameArray.slice(-1)]
-    console.log(playerNameArray, playerName);
 
     playerName.forEach(name => {
         player = name.name;
         name.score = score;
-        console.log(player, playerScore);
     })
 }
 
-
-// get quiz theme
 const getTheme = (theme) => {
     quizTheme = theme;
     questionArray = theme === "premier-league" ? premierLeagueQustions : athleteQustions;
     questionArrayColor = theme === "premier-league" ? primary : secondary;
 }
 
-// validate
 const validateInput = (theme) => {
    let nameInput = document.querySelector("#name-input");
     let message = ``;
@@ -59,7 +53,7 @@ const validateInput = (theme) => {
     }else if(!theme){
         message = `<p style="color:red">Velg tema</p>`
     }
-    console.log(nameInput.value)
+
     userOutput.innerHTML = message;
 }
 
@@ -69,7 +63,6 @@ if(activeWindow === "Quiz"){
     })
 }
 
-//start quiz
 const startQuiz = (e) => {
         score = 0;
         questionIndex = 0;
@@ -87,7 +80,6 @@ const closeQuiz = (btn) => {
     })
 }
 
-// answer selection
 const selectAnswer = (btns) => {
     let next = document.querySelector('.next');
     next.disabled = true;
@@ -106,38 +98,27 @@ const selectAnswer = (btns) => {
     })
 }
 
-// check answer 
 const checkAnswer = (answer, correct) => {
     if(answer === correct){
         score++;
-      //  playerScore++;
-        console.log("correct! score: " + score)
-    } else {
-        console.log("wrong! score: " + score)
-    }
+    }    
 }
 
-// toggle next question
 const nextQuestion = (btn) => {
     questionIndex++;
     
     btn.addEventListener('click', () => {
         if(questionIndex+1 <= quizLength){
-            console.log(questionArray[questionIndex])          
             checkAnswer(selectedOption, correctAnswer)
             gameHandler();
-            console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
-            console.log("player: ", player, "score: ", playerScore)
         } else if(questionIndex+1 > quizLength){
             checkAnswer(selectedOption, correctAnswer)
             startButton.disabled = false;
-            console.log("index ", questionIndex, "length: ", quizLength, "score: ", score)
             displayResult();
         }
     })
 }
 
-// end quiz / submit quiz
 const displayResult = () => {
     displayQuiz(questionArray, questionArrayColor);
     quizContainer.style.display = "none";
@@ -146,8 +127,6 @@ const displayResult = () => {
     closeQuiz(document.querySelector('.exit-btn'));
 }
 
-
-// quiz display
 const displayQuiz = (data, color) => {    
     let htmlTxt = "";
     let resultMsg = score > 3 ? "Godt jobbet!" : "Du kan bedre...";
@@ -181,13 +160,11 @@ const displayQuiz = (data, color) => {
         playerScore.push({name:playerName, score:score});
         localStorage.setItem("scores", JSON.stringify(playerScore));
     }
-    
     modal.innerHTML = htmlTxt;
     resultContainer = document.querySelector('.result-content');
     quizContainer = document.querySelector('.quiz-content');
 }
 
-// handle functions
 const gameHandler = () => {
     displayQuiz(questionArray, questionArrayColor);
     selectAnswer(document.querySelectorAll(".answer-container button"), correctAnswer);
