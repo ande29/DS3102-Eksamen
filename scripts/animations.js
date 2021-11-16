@@ -1,6 +1,6 @@
 // confetti
 const confettiLoop = (container) => {
-    let total = 105;
+    let total = 200;
     let width = container.offsetWidth;
     let height = container.offsetHeight;
     let confetti;
@@ -11,7 +11,7 @@ const confettiLoop = (container) => {
          
        TweenMax.set(confetti[i], {
            x: randomizeMax(width),
-           y: randomize(-100, 100),
+           y: randomize(-500, 500),
            scale: randomize(.5, 1),
            backgroundColor: `rgb(${randomize(0, 255)}, ${randomize(0, 255)}, ${randomize(0, 255)})`});
         };
