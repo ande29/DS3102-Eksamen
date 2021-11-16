@@ -174,7 +174,7 @@ table {
 }
 
 .user-section {
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem;
   text-align: center;
 }
@@ -325,7 +325,7 @@ table {
   margin: 10px;
 }
 
-.welcome-msg {
+.info-container {
   width: 100%;
   max-width: 400px;
   text-align: center;
@@ -333,12 +333,16 @@ table {
   border-radius: 5px;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.75);
 }
-.welcome-msg h2 {
+.info-container h2 {
   padding: 20px;
   font-size: 1.2rem;
 }
-.welcome-msg p {
+.info-container p {
   margin: 10px;
+}
+.info-container .tabs-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .btn {
@@ -390,6 +394,7 @@ table {
 
   .card {
     width: 320px;
+    height: 450px;
   }
 
   .content-header .content-filters {
