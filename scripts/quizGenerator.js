@@ -53,11 +53,11 @@ const validateInput = (theme) => {
         getUserInfo();
         startQuiz(startButton)
     }else if(nameInput.value.length < 1 && !theme){
-        message = `<p>Skriv inn brukernavn og velg tema</p>`
+        message = `<p style="color:red">Skriv inn brukernavn og velg tema</p>`
     }else if(nameInput.value.length < 1){
-        message = `<p>Skriv inn brukernavn</p>`
+        message = `<p style="color:red">Skriv inn brukernavn</p>`
     }else if(!theme){
-        message = `Velg tema`
+        message = `<p style="color:red">Velg tema</p>`
     }
     console.log(nameInput.value)
     userOutput.innerHTML = message;
