@@ -64,7 +64,7 @@
 
 }
 .fa-crown{
-    visibility: hidden;
+    //visibility: hidden;
     color:  #ffd650;
     transform: scale(2);
     
@@ -75,7 +75,7 @@
     height: auto;
     text-align: center;
 }
-.highscore-output li{
+.highscore-output p{
     padding: .5rem;
     margin: .3rem;
     border: 5px ridge #ffd650;
